@@ -43,7 +43,7 @@ directory in a fresh clone.
 Recommended GitHub repository slug:
 
 ```text
-mysterious-revival-fan-game
+revival-archives
 ```
 
 Recommended display title:
@@ -53,19 +53,19 @@ Revival Archive: Seven-Day Deadline
 ```
 
 The repository description must state that it is a free, non-commercial fan
-project. Do not name the repository only `mysterious-revival`, because that can
-look like an official or comprehensive repository for the original work.
+project. The selected name avoids presenting the repository as the official or
+comprehensive home of the original work.
 
 After creating the new GitHub repository, preserve the framework source remote
 as `upstream` and use the new project repository as `origin`:
 
 ```bash
 git remote rename origin upstream
-git remote add origin https://github.com/<username>/mysterious-revival-fan-game.git
+git remote add origin git@github.com:Cer6erusovo/revival-archives.git
 ```
 
 The public game URL will then be:
 
 ```text
-https://<username>.github.io/mysterious-revival-fan-game/
+https://cer6erusovo.github.io/revival-archives/
 ```

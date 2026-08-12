@@ -1,7 +1,9 @@
-# Game Concept: 复苏档案：七日限期
+# Legacy Prototype Concept: 复苏档案：槐荫里事件
 
 *Created: 2026-08-13*
-*Status: Approved*
+*Status: Superseded as full-game concept; preserved as Prototype design evidence*
+
+> **Important:** This document describes the Huaiyinli seven-day incident prototype, not the full game. The full project is now titled 《复苏档案》 / *Revival Archives* and has returned to Concept Rebaseline. Read the repository root `HANDOFF.md` before using this document.
 
 ---
 

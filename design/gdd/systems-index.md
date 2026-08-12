@@ -1,7 +1,9 @@
-# Systems Index: 复苏档案：七日限期
+# Legacy Prototype Systems Index: 复苏档案：槐荫里事件
 
 *Created: 2026-08-13*
 *Review mode: Lean — per-skill director gates skipped*
+
+> This index covers the Huaiyinli incident prototype only. It is not the approved system map for the full *Revival Archives* game. See `HANDOFF.md`.
 
 ## System Enumeration
 
