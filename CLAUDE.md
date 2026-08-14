@@ -1,54 +1,40 @@
-# Claude Code Game Studios -- Game Studio Agent Architecture
+# Revival Archives — Claude Code Entry
 
-Indie game development managed through 49 coordinated Claude Code subagents.
-Each agent owns a specific domain, enforcing separation of concerns and quality.
+本仓库使用 Claude-Code-Game-Studios，但项目事实优先于框架默认模板。
+
+## Required read order
+
+1. `AGENTS.md`
+2. `design/campaign/README.md`
+3. `design/campaign/concept-baseline.md`
+4. 当前正在工作的 chapter / character / supernatural 文档
+5. `design/campaign/decisions/decision-log.md`
+6. `HANDOFF.md`
+
+如果旧 `design/gdd/` 与 `design/campaign/` 冲突，以后者为准；旧 GDD 是槐荫里 Prototype 证据。
 
 ## Technology Stack
 
-- **Engine**: Web Runtime (modern evergreen browsers)
-- **Language**: TypeScript 5.9, HTML, CSS
-- **Version Control**: Git with trunk-based development
-- **Build System**: Vite 8
-- **Asset Pipeline**: Vite static asset pipeline; authored 2D image and audio assets
+- Engine/runtime: modern Web browser
+- Language: TypeScript
+- Build: Vite
+- Current playable implementation: Huaiyinli Prototype
+- Current product stage: Concept
+- Review mode: lean
 
-> **Note**: Engine-specialist agents exist for Godot, Unity, and Unreal with
-> dedicated sub-specialists. Use the set matching your engine.
+## Collaboration
 
-## Project Structure
+坚持用户驱动的协作：Question → Options/Discussion → Decision → Draft → Approval/Write。
 
-@.claude/docs/directory-structure.md
+但“协作”不意味着无条件同意用户：发现原著冲突、能力撞车、逻辑不成立或未来扩展风险时必须指出并讨论。
 
-## Engine Version Reference
+重要设计批准后要落盘到 `design/campaign/` 与 decision log，避免跨设备、跨模型上下文漂移。
 
-@docs/engine-reference/web/VERSION.md
+## Framework references
 
-## Technical Preferences
+- `.claude/docs/directory-structure.md`
+- `.claude/docs/coordination-rules.md`
+- `.claude/docs/coding-standards.md`
+- `.claude/docs/context-management.md`
 
-@.claude/docs/technical-preferences.md
-
-## Coordination Rules
-
-@.claude/docs/coordination-rules.md
-
-## Collaboration Protocol
-
-**User-driven collaboration, not autonomous execution.**
-Every task follows: **Question -> Options -> Decision -> Draft -> Approval**
-
-- Agents MUST ask "May I write this to [filepath]?" before using Write/Edit tools
-- Agents MUST show drafts or summaries before requesting approval
-- Multi-file changes require explicit approval for the full changeset
-- No commits without user instruction
-
-See `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` for full protocol and examples.
-
-> **First session?** If the project has no engine configured and no game concept,
-> run `/start` to begin the guided onboarding flow.
-
-## Coding Standards
-
-@.claude/docs/coding-standards.md
-
-## Context Management
-
-@.claude/docs/context-management.md
+正式 Campaign 进入实现前，不要因框架模板要求而提前重构当前可玩的 `src/`。

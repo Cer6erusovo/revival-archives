@@ -1,71 +1,33 @@
-# Public Repository Structure
+# Repository Structure
 
-This repository keeps the playable Web game, design evidence, tests and the
-Claude-Code-Game-Studios workflow in one project. Generated output and local
-session state are not committed.
+本仓库同时保存：正式 Campaign 设计、当前槐荫里 Prototype、Claude-Code-Game-Studios 工作流和验证证据。
 
-## Published game
+## 当前事实源
 
-| Path | Purpose | Commit? | Published to Pages? |
-| --- | --- | --- | --- |
-| `index.html` | Vite application entry | Yes | Yes |
-| `src/` | Game rules, authored content, UI and assets | Yes | Yes, after build |
-| `tests/` | Rule and persistence tests | Yes | No |
-| `package.json` / `package-lock.json` | Reproducible Web toolchain | Yes | Used during build |
-| `vite.config.ts` / `tsconfig.json` | Build and type-check configuration | Yes | Used during build |
-| `.github/workflows/deploy-pages.yml` | GitHub Pages build and deployment | Yes | Controls publishing |
+| Path | Purpose |
+| --- | --- |
+| `AGENTS.md` | 跨 GPT/Codex/Claude 的统一协作规则 |
+| `design/campaign/` | 正式游戏设计事实源 |
+| `design/campaign/decisions/` | 决策原因、否决方案，防止 AI 反复带偏 |
+| `design/campaign/canon/` | 原著锚点与能力撞车检查 |
+| `HANDOFF.md` | 当前推进位置，不再承载全部设定 |
 
-## Design and production evidence
+## 当前可运行 Prototype
 
-| Path | Purpose | Commit? |
-| --- | --- | --- |
-| `design/gdd/` | Approved concept and system boundaries | Yes |
-| `design/art/` | Original visual rules and asset standards | Yes |
-| `docs/architecture/` | Technical decisions | Yes |
-| `production/verification-*.md` | Evidence from automated and browser checks | Yes |
-| `prototypes/` | Historical throwaway interaction prototypes | Yes |
+| Path | Purpose |
+| --- | --- |
+| `index.html` | 当前 Vite 入口 |
+| `src/` | 槐荫里 Prototype 正式实现 |
+| `tests/` | 当前规则与存档测试 |
+| `design/gdd/` | Legacy 槐荫里设计证据，不能当正式 Campaign GDD |
+| `production/verification-2026-08-13.md` | 已完成验证 |
 
-## Local or generated only
+## 未来实现结构
 
-The following must remain ignored:
+目标而非立即迁移，见 `docs/architecture/target-project-layout.md`。
 
-- `node_modules/` — installed dependencies.
-- `dist/` — generated production build; GitHub Actions rebuilds it.
-- `.vite/`, `coverage/`, `*.tsbuildinfo` — tool caches and test output.
-- `production/session-state/*` and `production/session-logs/` — machine-local workflow state.
-- `.env*`, keys, credentials and secrets — never commit private configuration.
+原则：先把 Campaign 设计和知识边界分清，再迁代码。不要为了目录看起来漂亮而破坏现有 Pages、测试和存档。
 
-The exception `production/session-state/.gitkeep` preserves the expected empty
-directory in a fresh clone.
+## Generated / local only
 
-## Repository and Pages naming
-
-Recommended GitHub repository slug:
-
-```text
-revival-archives
-```
-
-Recommended display title:
-
-```text
-Revival Archive: Seven-Day Deadline
-```
-
-The repository description must state that it is a free, non-commercial fan
-project. The selected name avoids presenting the repository as the official or
-comprehensive home of the original work.
-
-After creating the new GitHub repository, preserve the framework source remote
-as `upstream` and use the new project repository as `origin`:
-
-```bash
-git remote rename origin upstream
-git remote add origin git@github.com:Cer6erusovo/revival-archives.git
-```
-
-The public game URL will then be:
-
-```text
-https://cer6erusovo.github.io/revival-archives/
-```
+继续忽略：`node_modules/`、`dist/`、`.vite/`、`coverage/`、`*.tsbuildinfo`、本地 session logs、`.env*` 和凭据。
