@@ -24,7 +24,7 @@
 - Language: TypeScript
 - Build: Vite
 - Current playable implementation: Huaiyinli Prototype
-- Current product stage: Concept
+- Current product stage: Systems Design
 - Review mode: lean
 
 ## Collaboration

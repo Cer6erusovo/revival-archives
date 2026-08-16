@@ -25,7 +25,7 @@
 - 第一案就是七中敲门鬼事件，不另造一个抢戏的“第一大事件”。
 - 主角第一只鬼当前为 **OPEN**；旧候选“死锁 / 关系锚定”已经撤销，不得当作正式设定。
 - 第一章场景与剧情当前 **PAUSED** 在第五幕旧后勤入口；未经用户明确重开，不得续写第五幕、替主角选择第一只鬼或补完第一章结局。
-- Campaign Concept gate 已通过，当前阶段为 **Systems Design**；Spatial Scene Exploration 已锁定 **A 混合节点式**，隔离原型已完成浏览器功能验证、等待用户现场感体验，不能改成纯点击换页或自由移动而不重新评审。
+- Campaign Concept gate 已通过，当前阶段为 **Systems Design**；Foundation 1–4 与 Spatial Scene Exploration GDD 已完成 lean 正式评审。下一项是 Investigation & Rule Reasoning。`prototypes/campaign-spatial-a/` 只是功能技术 Spike，不是体验样片或阶段门禁；不能用占位画面要求用户评审现场感，也不能改成纯点击换页或自由移动而不重新评审。
 - 鬼影绝不能作为主角核心能力；那是杨间后续重要能力。
 - 主角长期拥有进入同时代第一梯队的潜力，但路径、最终拼图和终局能力尚未锁定，不能提前绑定某个候选能力。
 - 白月光在七中失踪，后期真实重逢时已经不能算正常人；她不是普通驭鬼者式复活。

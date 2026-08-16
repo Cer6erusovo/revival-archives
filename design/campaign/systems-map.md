@@ -24,11 +24,11 @@
 
 | # | System | Category | Source | Priority | Depends On | Status |
 |---|---|---|---|---|---|---|
-| 1 | [Campaign State & Event](systems/campaign-state-and-events.md) | Foundation | Implicit | MVP | — | Baseline |
-| 2 | [Scene & Content Registry](systems/scene-content-registry.md) | Foundation | Explicit | MVP | — | Baseline |
-| 3 | [Input, Settings & Accessibility Contract](systems/input-settings-accessibility.md) | Meta/Foundation | Explicit | MVP | — | Baseline |
-| 4 | [Versioned Campaign Persistence](systems/campaign-persistence.md) | Persistence | Explicit | MVP | 1, 2 | Baseline |
-| 5 | [Spatial Scene Exploration](systems/spatial-scene-exploration.md) | Core Gameplay | Explicit | MVP | 1, 2, 3 | Prototype Verified / Human Feel Pending |
+| 1 | [Campaign State & Event](systems/campaign-state-and-events.md) | Foundation | Implicit | MVP | — | Approved |
+| 2 | [Scene & Content Registry](systems/scene-content-registry.md) | Foundation | Explicit | MVP | — | Approved |
+| 3 | [Input, Settings & Accessibility Contract](systems/input-settings-accessibility.md) | Meta/Foundation | Explicit | MVP | — | Approved |
+| 4 | [Versioned Campaign Persistence](systems/campaign-persistence.md) | Persistence | Explicit | MVP | 1, 2 | Approved |
+| 5 | [Spatial Scene Exploration](systems/spatial-scene-exploration.md) | Core Gameplay | Explicit | MVP | 1, 2, 3 | Approved — functional spike is evidence only |
 | 6 | Investigation & Rule Reasoning | Core Gameplay | Explicit | MVP | 1, 2, 5 | Not Started |
 | 7 | Consequence & Failure Explanation | Core Gameplay | Explicit | MVP | 1, 2, 6 | Not Started |
 | 8 | Narrative & Relationship State | Narrative | Explicit | MVP thin slice / VS full | 1, 2, 7 | Not Started |
@@ -252,8 +252,8 @@ MVP 使用系统 1–11 的最小切片，验证：
 | Vertical Slice-only systems | 1 |
 | Alpha-first systems | 1 |
 | System GDDs started | 5 |
-| Lean self-reviewed baselines | 5 |
-| System GDDs approved | 0 |
+| Lean formally reviewed GDDs | 5 |
+| System GDDs approved | 5 |
 | Blocked systems | 1 |
 
 ## 11. Lean Self-Review
@@ -263,13 +263,14 @@ MVP 使用系统 1–11 的最小切片，验证：
 - 依赖图没有硬循环，潜在 narrative/consequence 循环已有事件边界。
 - Prototype 与 Campaign 的系统、入口和存档保持分离。
 - Supernatural Cost & Growth 明确阻塞，没有通过系统图偷定第一只鬼。
-- Spatial Scene Exploration 已锁定 A 模型；隔离原型已通过浏览器功能路径，主观现场感仍待用户实际体验。
+- Foundation 1–4 与 Spatial Scene Exploration 已完成 lean 正式评审并批准；评审记录位于 `systems/reviews/`。
+- Spatial Scene Exploration 技术 Spike 仅验证浏览器功能路径，不承担现场感验收。
 - TD-SYSTEM-BOUNDARY、PR-SCOPE 与 CD-SYSTEMS 独立代理审查未运行；lean 流程下这些不是 PHASE-GATE。
 
 ## 12. Next
 
 1. Campaign Concept → Systems Design gate 已于 2026-08-16 通过；
-2. Foundation system contracts 已形成 baseline；
-3. Spatial Scene Exploration A 隔离原型已完成浏览器功能验证；
-4. 用户完成现场感体验后，进入 Investigation & Rule Reasoning；
+2. Foundation 1–4 与 Spatial Scene Exploration GDD 已批准；
+3. Spatial Scene Exploration A 技术 Spike 已完成浏览器功能验证，但不是体验门禁；
+4. 下一项按设计顺序进入 Investigation & Rule Reasoning；
 5. 第一只鬼和第五幕保持 PAUSED。

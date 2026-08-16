@@ -9,7 +9,7 @@
 - Campaign implementation: 尚未开始
 - Opening chapter: 大昌市第七中学敲门鬼事件并行原创路线
 - Current refinement: 第一章第四幕结构与第五幕入口已锁定；后续剧情与第一只鬼为 OPEN / PAUSED
-- Current workflow: A 混合节点式隔离原型已通过浏览器功能验证，等待用户现场感体验
+- Current workflow: Investigation & Rule Reasoning system design；A 技术 Spike 不作为体验门禁
 
 ## 阅读顺序
 

@@ -2,9 +2,13 @@
 
 > Date: 2026-08-17
 >
-> Verdict: **PROCEED TO HUMAN FEEL TEST**
+> Verdict: **SPIKE COMPLETE — functional evidence only**
 >
 > Scope: isolated formal Campaign interaction study; not the shipped Huaiyinli Prototype
+
+## Classification correction
+
+该产物是一次偏离正式 Phase 2 顺序的 interaction spike。它使用占位构图和硬编码内容，只能证明 A 模型的交互链在浏览器中可运行；它不是 Concept Prototype 的正式门禁，也不是 Vertical Slice，不能用于判断现场感、恐怖氛围、美术质量或正式制作可行性。
 
 ## Hypothesis
 
@@ -39,9 +43,9 @@
 
 ## Result
 
-自动与浏览器层面的交互假设成立：A 模型能够把基础行走、观察、规则推断和遭遇放在同一空间界面内，没有退化为纯卡片翻页，也没有引入自由移动的制作成本。
+自动与浏览器层面的功能假设成立：A 模型能够把基础行走、观察、规则推断和遭遇放在同一空间界面内，没有退化为纯卡片翻页，也没有引入自由移动的制作成本。
 
-尚未被验证的是主观体验：恐怖氛围是否足够、手电与转向是否真的让玩家产生现场感、信息密度是否舒适。这必须由用户实际体验后决定，不能由实现者自评为通过。
+没有被验证的是主观体验：恐怖氛围、现场感、美术可信度、动画重量、声音空间和信息密度。占位画面无法提供这些问题所需的代表性质量，因此不应把该产物交给用户做体验结论。
 
 ## Boundaries retained
 
@@ -50,10 +54,10 @@
 - 没有续写第五幕；
 - 队尾异常只是交互占位，不是新的正式剧情结论。
 
-## Next decision
+## Correct workflow handoff
 
-用户完成一次真实体验后：
-
-- 若现场感成立：保留 A 模型，进入 Investigation & Rule Reasoning GDD；
-- 若仍像卡片：只调整节点内表现和反馈，不自动扩大为自由移动；
-- 若操作负担过高：减少热点或转向层级，不改变已锁定的剧情边界。
+1. 回到 Systems Design，补齐并评审 Spatial Scene Exploration GDD；
+2. 继续 Investigation & Rule Reasoning 等剩余 MVP system GDD；
+3. 完成 Systems Design gate 与 Technical Setup；
+4. 到 Pre-Production 制作 3–5 分钟、具有代表性场景美术/动画/声音的 Vertical Slice；
+5. 只有该 Vertical Slice 才进入无指导的人类现场感与核心幻想体验。

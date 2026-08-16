@@ -8,7 +8,7 @@
 - Review mode: **lean**
 - Existing playable `槐荫里事件` remains a **Prototype**, not Campaign canon.
 - Do not move/rewrite current `src/`, Pages or saves merely for directory cleanliness.
-- Current design focus: **human feel test for the A-model spatial exploration prototype**. Browser functionality is verified; Chapter 1 narrative is paused at the Act 5 legacy-area entry and first ghost selection remains **OPEN**.
+- Current design focus: **Investigation & Rule Reasoning system design**. Foundation 1–4 and A-model Spatial Scene Exploration are formally approved in lean mode. The existing interaction spike is functional evidence only; Chapter 1 narrative is paused at the Act 5 legacy-area entry and first ghost selection remains **OPEN**.
 
 ## Locked product identity
 
@@ -235,6 +235,6 @@ Sound-centered first ghosts are high-risk at Seven High because Knocking Ghost i
 
 Start by reading this baseline plus current Campaign docs.
 
-Do **not** continue Act 5 or first-ghost ideation by default. Spatial Scene Exploration is locked to the A hybrid-node model. Its isolated prototype has passed browser-path validation and now needs the user's feel test. Only after that decision should work proceed to Investigation & Rule Reasoning; do not modify the current game entry.
+Do **not** continue Act 5 or first-ghost ideation by default. Spatial Scene Exploration is locked to the A hybrid-node model and approved. Treat its isolated browser build only as a technical spike; it cannot validate immersion. Proceed to Investigation & Rule Reasoning without modifying the current game entry.
 
 The existing Huaiyinli Prototype remains stable and playable. Do not migrate or rewrite its code merely to satisfy the new document structure.

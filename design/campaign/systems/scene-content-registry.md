@@ -1,6 +1,6 @@
 # System GDD: Scene & Content Registry
 
-> Status: BASELINE — lean self-review passed
+> Status: APPROVED — lean formal review 2026-08-17
 >
 > Created: 2026-08-16
 >
@@ -15,6 +15,10 @@ Scene & Content Registry 保存正式 Campaign 可引用的场景、人物、可
 ## 2. Player Fantasy
 
 玩家看到的学校、人物和线索应像同一个世界，而不是互相矛盾的文本卡片。一个门、一个楼梯坐标或一通电话在不同界面出现时，必须指向同一个内容实体和一致来源。
+
+## Game Feel
+
+本系统的手感目标是“回到同一个地方，仍然认得它”。相同 scene、prop、actor 和 fact 在现场、手机与记录层中保持身份、名称和已知状态一致；variant 只改变已发生的部分，不重新生成一个看似相似的替代物。内容加载不能让玩家在已进入场景后看到关键对象迟到、跳位或突然改名；媒体缺失时以稳定结构和文字 fallback 保持空间与行动连续。
 
 ## 3. Detailed Rules
 

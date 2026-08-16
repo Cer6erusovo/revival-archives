@@ -1,6 +1,6 @@
 # System GDD: Campaign State & Event
 
-> Status: BASELINE — lean self-review passed
+> Status: APPROVED — lean formal review 2026-08-17
 >
 > Created: 2026-08-16
 >
@@ -15,6 +15,10 @@ Campaign State & Event 是正式 Campaign 的确定性事实中心。它保存�
 ## 2. Player Fantasy
 
 玩家应感到自己的每个行动都在同一个可信世界里留下痕迹：门打开过、电话断过、某人被看见或失踪、一个假设被证实，这些事实不会因切换界面而消失，也不会被剧情方便地重写。
+
+## Game Feel
+
+本系统的手感目标是“世界立即承认行动，而且从不偷偷改口”。有效 command 在 100 ms 内产生 pending/accepted 反馈，规则结果以单次原子 event group 出现；无效 command 同样立即解释拒绝原因。导致死亡、失踪或路线关闭的事实必须先于终止状态呈现，使玩家能把后果与自己的行动连接起来。State 不制造动画重量，但要提供稳定顺序，让 Presentation 能表现出明确因果而非界面闪烁。
 
 ## 3. Detailed Rules
 

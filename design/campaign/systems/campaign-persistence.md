@@ -1,6 +1,6 @@
 # System GDD: Versioned Campaign Persistence
 
-> Status: BASELINE — lean self-review passed
+> Status: APPROVED — lean formal review 2026-08-17
 >
 > Created: 2026-08-16
 >
@@ -15,6 +15,10 @@ Versioned Campaign Persistence 负责把已提交的 Campaign state、内容版�
 ## 2. Player Fantasy
 
 玩家可以放心暂停和回来：进度不会因刷新消失，也不会被旧 Prototype 污染。即使存档损坏或版本变化，游戏会清楚说明恢复到了哪里，而不是默默改写人物或调查结果。
+
+## Game Feel
+
+存档的手感目标是“安静但可信”。正常 autosave 只使用克制的已保存状态，不打断场景或制造奖励音效；手动保存、失败和恢复必须给出明确结果。加载后玩家回到稳定 checkpoint，环境、人物、调查事实和最近后果同时一致出现，不先显示场景再补状态。任何回退、迁移失败或数据丢失都直接说明恢复点与原因，不用含糊的成功提示掩盖问题。
 
 ## 3. Detailed Rules
 

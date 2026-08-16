@@ -1,8 +1,10 @@
 # System GDD: Spatial Scene Exploration
 
-> Status: BASELINE — interaction model A locked by user
+> Status: APPROVED — lean formal review 2026-08-17; interaction model A locked by user
 >
 > Created: 2026-08-17
+>
+> Corrected: 2026-08-17 — technical spike separated from experience validation
 >
 > System map ID: 5
 >
@@ -19,6 +21,40 @@ Spatial Scene Exploration 使用“混合节点式”交互模型：世界由可
 玩家应感到自己真的站在七中的教室、走廊和楼梯中：知道身后是什么、刚从哪里来、哪个物体发生了改变，也能在空间规律失常时凭自己的记忆指出异常。
 
 移动不是装饰性换页。选择朝向、照向哪里、靠近什么以及是否回头，都可能产生事实、风险或人物后果。
+
+## Game Feel
+
+### Feel target
+
+空间探索应当是“反应及时，但行动有分量”。玩家改变视线时界面必须立即回应；真正跨过门、进入走廊或踏上楼梯时，则需要一个短促但明确的空间承诺。整体节奏是观察、行动、停下来确认，而不是持续点按或追求操作速度。
+
+### Responsiveness profile
+
+| Interaction | Startup | Active feedback | Recovery / settle | Intended weight |
+|---|---:|---:|---:|---|
+| Hotspot focus / hover | 0–60 ms | 120–180 ms | 0–80 ms | 轻；只确认“这里可观察” |
+| Viewpoint turn | 0–80 ms | 120–220 ms | ≤300 ms total | 中；保持所在 node 不变 |
+| Close view | 0–60 ms | 120–220 ms | ≤220 ms | 轻到中；像主动靠近物体 |
+| Node movement | 0–100 ms | 300–700 ms | 新场景稳定后才开放 command | 重；表示真实跨过一个空间边界 |
+| Confirmed anomaly | command 后立即成立 | 一次局部光、位置或声音断层 | 300–900 ms 后稳定可读 | 冷硬；不使用庆祝反馈 |
+
+输入成功必须在 100 ms 内出现视觉、声音或文字中的至少一种确认；command 的规则结果不等待动画完成才计算。重复输入在 pending 期间只反馈“正在行动”，不得叠加移动。
+
+### Tension cadence
+
+- 正常空间允许玩家停留和建立记忆，不持续播放恐怖动效或音乐预警；
+- 异常先破坏一个可指出的事实，再让玩家决定是否靠近或验证；
+- 紧张段采用“短促行动 → 稳定构图 → 玩家观察”的循环，必要线索不会在自动倒计时中消失；
+- 规则被证实时只让一个局部关系恢复清晰，其他空间继续保持威胁；
+- 失败或人物后果先保留最后可见原因，再进入复盘，不用大字、红闪或胜负音效覆盖现场。
+
+### Impact language
+
+- 手电只改变当前可见范围和材质细节，不把所有 hotspot 变成发光按钮；
+- 空间错位通过共同锚点、构图接缝、人物缺席或声音距离体现，不依赖全屏 glitch；
+- 灵异存在的重量来自错误的静止、位置连续性或环境反馈，而不是受击、血条和屏幕震动；
+- pointer 与 keyboard 的结果强度一致，键盘路径不能变成低反馈的替代模式；
+- reduced motion 保留同样的状态边界、构图和音画信息，只取消位移、抖动和长过渡。
 
 ## 3. Detailed Rules
 
@@ -82,15 +118,17 @@ Spatial Scene Exploration 使用“混合节点式”交互模型：世界由可
 - 手机、记录和设置作为可打开的辅助层；关闭后返回同一 node/viewpoint。
 - 已确认事实可以进入记录层，未观察信息不能因 UI 预加载而暴露。
 
-### 3.8 Prototype slice
+### 3.8 Technical spike evidence and boundary
 
-第一个隔离原型只验证模型，不制作正式剧情：
+`prototypes/campaign-spatial-a/` 是一次已经完成的功能技术 Spike，只提供以下证据：
 
 1. Normal route：教室门口 → 五楼走廊 → 西楼梯平台，可前进、回望、转向、照明和检查物体；
 2. Anomaly route：同一楼梯节点发生出口重复，玩家通过共同锚点识别异常；
 3. Confrontation beat：队尾异常人物逼近，玩家能观察、示警、保护或撤离，结果通过位置状态表现；
 4. 不出现第一只鬼、Act 5、白月光结局或正式存档迁移；
-5. 原型保存在 prototypes/，不得复制进当前 src/。
+5. Spike 保存在 `prototypes/`，不得复制进当前 `src/`。
+
+该 Spike 使用占位构图和硬编码内容，不能验证 Player Fantasy、Game Feel、恐怖氛围、美术可信度、动画重量或声音空间。它不是 Concept Prototype 或 Vertical Slice 的阶段门禁，不要求用户据此给出体验结论。
 
 ## 4. Formulas
 
@@ -174,6 +212,33 @@ MeaningfulHotspotsPerView 的首版目标为 3–7，safe range 1–9。
 
 自由移动、血条战斗、纯卡片导航和 first-ghost ability 不是 tuning options。
 
+## Visual / Audio Requirements
+
+### Visual
+
+- 正式场景首先需要一套可信、可记忆的中国普通校园资产：门窗比例、楼梯段、教室编号、瓷砖接缝和生活痕迹必须能建立正常空间；
+- 正常、晚自习、鬼域和后果 variant 共用同一空间骨架，通过局部光线、远端缺失、物件状态和人物位置显示变化；
+- 每个需要识别的异常至少保留一个跨 variant 一致的构图锚点；
+- 热点依靠轮廓、留白、焦点边界或局部照明可辨，不给所有可交互物统一发光描边；
+- 代表性体验验收必须等到 Pre-Production Vertical Slice；占位几何只能用于 route、focus 和 state 验证。
+
+### Audio
+
+- 每个 node 可定义环境底层、位置性声音和短反馈声；空间声音响应当前 node/viewpoint，而不是只按页面播放；
+- 关键声音线索必须有不泄露答案的非听觉备份，例如方向文字、人物反应或局部视觉变化；
+- 正常阶段不提前使用持续恐怖音乐；异常优先改变距离、方向、遮挡或重复关系；
+- 浏览器未授权 audio、静音或加载失败时，所有必要路线和推理仍然成立；
+- 具体混音、素材清单和加载策略由未来 Audio & Atmosphere GDD 拥有，本系统只提供空间上下文。
+
+## UI Requirements
+
+- desktop 中 scene 目标占可用 viewport 的 60–85%，地点、感知状态和当前动作退居边缘；
+- exit 和 hotspot 绑定场景内物理位置，焦点或选择后才显示 1–4 个语义动作；
+- viewpoint controls 明确写出方向或回望对象，不使用只有图标的罗盘猜谜；
+- 手机、个人记录、长文本与设置使用临时辅助层，关闭后恢复原 node/viewpoint 和合理焦点；
+- UI 不自动公布隐藏 route、visit count、威胁倒计时或未观察事实；
+- 200% zoom、390 CSS px 宽度、keyboard-only、mute 和 reduced motion 下保留核心路径。
+
 ## 8. Acceptance Criteria
 
 - 玩家可用 pointer 或 keyboard 完成至少 3 个 node 的前进、回望和返回路线。
@@ -183,11 +248,19 @@ MeaningfulHotspotsPerView 的首版目标为 3–7，safe range 1–9。
 - anomaly route 至少使用一个共同锚点，让玩家能够指出重复或错位发生在哪里。
 - confrontation 不显示 HP、damage number 或攻击技能栏，结果由位置和行动表现。
 - 场景保持主视觉区域，辅助 UI 不退化为永久卡片墙。
-- reduced motion、mute 和 keyboard-only 条件下仍可完成完整原型路径。
+- reduced motion、mute 和 keyboard-only 条件下仍可完成完整实现路径。
 - 快速重复点击不会跳过 node、重复 consequence 或破坏 state。
-- 原型不包含第一只鬼、Act 5 或 Prototype legacy 能力。
+- 系统验证切片不包含第一只鬼、Act 5 或 Prototype legacy 能力。
 - 60 fps 动效预算内没有持续 JavaScript animation loop；静态状态不消耗循环更新。
 
-## Lean Self-Review
+## Open Questions
 
-PASS：A 模型被定义为可验证的空间、观察和遭遇系统；它与纯点击和自由移动有明确边界，也没有越过剧情停止线。
+- 正式场景使用 DOM 分层、Canvas/WebGL 还是混合渲染，由 Phase 3 architecture 决定；本 GDD 不预选实现技术；
+- 正常校园、鬼域 variant、人物局部和环境音的代表性资产生产方式与成本，要在 Pre-Production 前形成资产规格；
+- 玩家能否在 3–5 分钟代表性 Vertical Slice 中无指导建立空间、指出异常并承担一次验证风险，留给 Vertical Slice playtest；
+- Investigation & Rule Reasoning 将如何把 observation fact 变成可操作假设，是下一个 system GDD 的职责；
+- Audio & Atmosphere 将如何定义方向声、距离变化和非听觉备份的统一 schema，尚未设计。
+
+## Review Result
+
+APPROVED：八个必需章节、Game Feel、Visual/Audio、UI 和 Open Questions 完整；规则、公式、边界和上游依赖可实现。技术 Spike 只作为功能证据，不参与体验 verdict。下游 Investigation、Consequence、Narrative、Field UI 与 Audio 接口保持 provisional，待各自 GDD 回填双向依赖。

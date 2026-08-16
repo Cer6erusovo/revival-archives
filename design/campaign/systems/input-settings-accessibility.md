@@ -1,6 +1,6 @@
 # System GDD: Input, Settings & Accessibility Contract
 
-> Status: BASELINE — lean self-review passed
+> Status: APPROVED — lean formal review 2026-08-17
 >
 > Created: 2026-08-16
 >
@@ -17,6 +17,10 @@
 ## 2. Player Fantasy
 
 玩家应把注意力放在空间和规律上，而不是和界面搏斗。无论使用鼠标还是键盘、开启静音还是 reduced motion，玩家都能获得完成核心推理所需的信息和操作路径。
+
+## Game Feel
+
+输入应当“安静、直接、可预期”：主要 control 在输入后 100 ms 内显示 focus、pressed 或 pending 状态，普通反馈在 120–220 ms 内稳定；键盘与 pointer 使用同一 command，不产生轻重不同的结果。设置调整立即预览但不改变 gameplay state。无障碍替代不是简化版模式：静音、reduced motion 和 keyboard-only 仍保留相同的信息时序、危险语义与行动后果。
 
 ## 3. Detailed Rules
 

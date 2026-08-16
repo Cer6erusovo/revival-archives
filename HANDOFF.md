@@ -44,7 +44,7 @@
 
 第三幕结尾为电话中的两人都确认自己在西楼梯，镜头展示相同楼梯坐标上的两个不同空间；随后通讯失真并中断。
 
-**当前流程：Systems Design。** Spatial Scene Exploration 已锁定 A 混合节点式：固定空间节点 + 节点内有限转向/手电/局部观察/直接交互。隔离原型已完成浏览器功能验证，见 `prototypes/campaign-spatial-a/`；下一步由用户做一次真实体验，判断现场感与恐怖氛围。通过后进入 Investigation & Rule Reasoning。不要继续 Act 5、第一只鬼、第二章或修改当前 Campaign/Prototype 正式入口。
+**当前流程：Systems Design。** Foundation 1–4 与 Spatial Scene Exploration 已完成 lean 正式评审；A 混合节点式锁定为固定空间节点 + 节点内有限转向/手电/局部观察/直接交互。`prototypes/campaign-spatial-a/` 仅保留为功能技术 Spike，不提供现场感或恐怖氛围结论。下一项按设计顺序进入 Investigation & Rule Reasoning；不是继续制作占位原型。不要继续 Act 5、第一只鬼、第二章或修改当前 Campaign/Prototype 正式入口。
 
 ## Existing prototype verification
 

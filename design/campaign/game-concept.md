@@ -246,7 +246,7 @@ Fellowship 和 Submission 不是当前核心目标：本作是单人体验，也
 ### 13.2 开放问题
 
 - 重开第一只鬼设计时，怎样用统一质量门槛淘汰“工具化、抽象化、漏洞化”的候选；
-- A 混合节点式已证明可承载完整浏览器交互；用户实际体验时是否形成足够现场感、而不是仍像卡片；
+- A 混合节点式已由技术 Spike 证明可承载浏览器交互；代表性 Vertical Slice 中能否形成足够现场感、而不是仍像卡片；
 - 失败、重试和永久档案信息之间的关系；
 - 不使用简单好感度数值时，人物关系如何被玩家理解；
 - 主角何时、以何种条件进入官方驭鬼者体系；
@@ -285,7 +285,7 @@ MVP 在这里指“最小可验证版本”，用于验证核心体验，而不�
 
 | 阶段 | 目标 | 当前状态 |
 |---|---|---|
-| Concept Prototype | 正常校园片段 + 已锁定第一至第四幕，验证核心交互 | Spatial A 原型功能通过，完整切片待后续系统设计 |
+| Concept Prototype | 正常校园片段 + 已锁定第一至第四幕，验证核心交互 | Concept gate 已独立通过；Spatial A 技术 Spike 不承担体验结论 |
 | Vertical Slice | 完整第一章的代表性质量样片 | 被第五幕和第一只鬼阻塞 |
 | Early Campaign | 多章成长与官方体系的初步闭环 | 后续 |
 | Full Vision | 长期独立传奇 | 愿景，不作当前交付承诺 |
@@ -296,7 +296,7 @@ MVP 在这里指“最小可验证版本”，用于验证核心体验，而不�
 2. 正式 Campaign Systems Map 已建立；
 3. Concept → Systems Design gate 已于 2026-08-16 通过；
 4. Foundation system contracts 与 Spatial Scene Exploration baseline 已建立；
-5. A 隔离原型已完成浏览器功能验证，下一步由用户体验现场感；
-6. 体验通过后进入 Investigation & Rule Reasoning。
+5. A 技术 Spike 已完成浏览器功能验证，但不提供现场感结论；
+6. Foundation 1–4 与 Spatial Scene Exploration GDD 已批准；下一项进入 Investigation & Rule Reasoning。
 
 第一只鬼和第五幕续写不在当前下一步中。

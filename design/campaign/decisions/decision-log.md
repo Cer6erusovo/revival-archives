@@ -4,15 +4,23 @@
 
 ## 2026-08-17
 
+### PROCESS CORRECTION — A 浏览器产物只算技术 Spike
+
+**Decision:** `prototypes/campaign-spatial-a/` 只记录 A 模型的功能可行性，不再标记为现场感体验门禁，也不要求用户用占位画面评审恐怖氛围。
+
+**Why:** CCGS 的 Systems Design 阶段只完成系统 GDD；允许占位资源的 Prototype 只能回答单一机制问题。现场感、代表性画面、动画和声音应由完成 GDD、architecture 与 UX 后的 Pre-Production Vertical Slice 验证。
+
+**Result:** A Spike 保留为历史技术证据；Foundation 1–4 与 Spatial Scene Exploration 已补齐 Game Feel 并通过 lean 正式评审。流程回到 Investigation & Rule Reasoning system design。
+
 ### LOCKED — Spatial Scene Exploration 采用 A 混合节点式
 
 **Decision:** 正式 Campaign 使用固定空间节点，并在节点内提供有限转向、手电/视线移动、局部观察、物体近看和直接动作。出口位于场景中的真实位置。它不是纯点击换页，也不是 WASD 自由移动。
 
 **Why:** 相比纯点击，它能承载空间记忆、动画和现场恐怖；相比自由移动，它更适合个人首次开发、桌面 Web 和章节制 2D 资产规模。规则解密与灵异遭遇仍通过位置、观察和后果完成，不引入传统血条战斗。
 
-**Result:** `prototypes/campaign-spatial-a/` 已完成基础行走、直接交互、空间异常、假设验证和无血条遭遇的真实浏览器路径，控制台无错误。功能层面进入下一关，但现场感与恐怖氛围仍待用户实际体验。
+**Result:** `prototypes/campaign-spatial-a/` 已完成基础行走、直接交互、空间异常、假设验证和无血条遭遇的真实浏览器路径，控制台无错误。该产物后来被纠正分类为技术 Spike：它只证明功能可行，不证明现场感、恐怖氛围或代表性质量。
 
-**Next:** 用户完成一次体验；通过后进入 Investigation & Rule Reasoning。不得修改当前 `src/` 或越过 Act 5 停止线。
+**Next:** 完成 Spatial Scene Exploration GDD 的正式评审，然后继续 Investigation & Rule Reasoning。体验验收留到 Pre-Production 的代表性 Vertical Slice。不得修改当前 `src/` 或越过 Act 5 停止线。
 
 ## 2026-08-16
 
