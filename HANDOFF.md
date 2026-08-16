@@ -11,9 +11,10 @@
 1. `AGENTS.md`
 2. `design/campaign/README.md`
 3. `design/campaign/CURRENT-LOCKED-BASELINE.md`
-4. `design/campaign/concept-baseline.md`
-5. `design/campaign/chapters/ch01-seven-high-school.md`
-6. `design/campaign/decisions/decision-log.md`
+4. `design/campaign/game-concept.md`
+5. `design/campaign/concept-baseline.md`
+6. `design/campaign/chapters/ch01-seven-high-school.md`
+7. `design/campaign/decisions/decision-log.md`
 
 ## Current truth
 
@@ -22,6 +23,7 @@
 - 正式 Campaign 从七中敲门鬼事件开始。
 - 原创主角与杨间同校、邻近班级；同一晚走不同逃亡路线，各自成为驭鬼者。
 - 主角第一只鬼当前为 **OPEN**；“死锁 / 关系锚定”已经撤销，只保留为候选历史。
+- 第一章场景与剧情已经主动暂停在第五幕旧后勤区域入口；未经用户明确重开，不继续生成第一只鬼或后续剧情。
 - 白月光在七中失踪；后续利用原著饿死鬼阶段杨间再次返回七中的节点重新出现线索；很后期真实重逢时她已不是正常人。
 
 ## Current design position
@@ -39,7 +41,7 @@
 
 第三幕结尾为电话中的两人都确认自己在西楼梯，镜头展示相同楼梯坐标上的两个不同空间；随后通讯失真并中断。
 
-**下一步：从 Act 5 开始筛选第一只鬼。** 每个候选先验证野生状态恐怖场面、一句话表层生存规律，以及同一深层规律能否同时支撑主动驾驭和白月光悲剧。不要先写技能树、终局、第二章或 Campaign 代码。
+**当前流程：由用户审核正式 Campaign Concept。** 审核通过后，再分别提出 Campaign 专属 Art Bible 与 Systems Map 方案并等待确认，最后进行 Concept gate。不要继续 Act 5、第一只鬼、第二章或 Campaign 代码。
 
 ## Existing prototype verification
 

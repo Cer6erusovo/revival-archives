@@ -8,7 +8,7 @@
 - Review mode: **lean**
 - Existing playable `槐荫里事件` remains a **Prototype**, not Campaign canon.
 - Do not move/rewrite current `src/`, Pages or saves merely for directory cleanliness.
-- Current design focus: **Chapter 1 / 七中**; first ghost selection is **OPEN**.
+- Current design focus: **Campaign concept review**. Chapter 1 narrative is paused at the Act 5 legacy-area entry; first ghost selection remains **OPEN**.
 
 ## Locked product identity
 
@@ -181,6 +181,12 @@ The protagonist's eventual first original ghost is somewhere in this legacy area
 
 ## First ghost — OPEN, do not lock a candidate
 
+### Design pause — LOCKED
+
+Narrative and scene design stop at the Act 5 legacy-area entry. Do not continue the first-ghost encounter, driving scene, white-moonlight reunion/tragedy mechanism, or Chapter 1 ending unless the user explicitly reopens this topic.
+
+Recent rejected directions include White Porcelain / force-transmission, Burden / unfinished-action variants, the Completion Ghost, and the Bone-Cage Corpse. They remain discussion history, not candidates awaiting automatic refinement.
+
 ### Previously locked `死锁` is REVOKED
 
 The old “关系锚定 / 死锁” decision is no longer canon. It became too abstract, difficult to write consistently, and too easy to create loopholes.
@@ -229,13 +235,6 @@ Sound-centered first ghosts are high-risk at Seven High because Knocking Ghost i
 
 Start by reading this baseline plus current Campaign docs.
 
-Before continuing design, correct stale repository Markdown that still says `死锁` is LOCKED if needed.
+Do **not** continue Act 5 or first-ghost ideation by default. The current workflow is to review the formal Campaign concept with the user. After approval, separately propose a Campaign-specific art bible and systems map before a Concept gate review.
 
-Then continue from **Act 5 / first ghost selection**. Do not jump to Chapter 2 or implementation.
-
-For each first-ghost candidate, first test only:
-1. wild-ghost horror scene;
-2. one-sentence surface survival rule;
-3. whether same deeper rule can support active, intelligent drive and later white-moonlight tragedy.
-
-Do not design a skill tree or final battle until those pass.
+The existing Huaiyinli Prototype remains stable and playable. Do not migrate or rewrite its code merely to satisfy the new document structure.

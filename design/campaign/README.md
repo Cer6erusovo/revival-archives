@@ -8,19 +8,21 @@
 - Review mode: lean
 - Campaign implementation: 尚未开始
 - Opening chapter: 大昌市第七中学敲门鬼事件并行原创路线
-- Current refinement: 第一章第四幕结构与第五幕入口已锁定；第一只鬼仍为 OPEN
+- Current refinement: 第一章第四幕结构与第五幕入口已锁定；后续剧情与第一只鬼为 OPEN / PAUSED
+- Current workflow: 正式 Campaign Concept 待用户审核
 
 ## 阅读顺序
 
 1. `CURRENT-LOCKED-BASELINE.md` — 当前最高优先级基线
-2. `concept-baseline.md` — 整体产品方向
-3. `chapters/ch01-seven-high-school.md` — 第一章当前版本
-4. `narrative/protagonist.md` — 主角人格与长期成长
-5. `narrative/white-moonlight.md` — 白月光长期线
-6. `canon/original-work-anchors.md` — 已核对的原著事实
-7. `canon/ability-collision-blacklist.md` — 原著能力撞车禁区
-8. `decisions/decision-log.md` — 设计取舍与被否决/撤销方案
-9. `supernatural/deadlock.md` — 已撤销的“死锁”候选档案，仅供避免设计回退
+2. `game-concept.md` — 正式 Campaign 产品概念
+3. `concept-baseline.md` — 整体产品方向
+4. `chapters/ch01-seven-high-school.md` — 第一章当前版本与停止线
+5. `narrative/protagonist.md` — 主角人格与长期成长
+6. `narrative/white-moonlight.md` — 白月光长期线
+7. `canon/original-work-anchors.md` — 已核对的原著事实
+8. `canon/ability-collision-blacklist.md` — 原著能力撞车禁区
+9. `decisions/decision-log.md` — 设计取舍与被否决/撤销方案
+10. `supernatural/deadlock.md` — 已撤销的“死锁”候选档案，仅供避免设计回退
 
 ## 状态标签
 
@@ -29,6 +31,7 @@
 - **OPEN**：尚未设计。
 - **REJECTED**：已经讨论并否决，除非有新理由不要重复提出。
 - **REVOKED**：曾经锁定、后来明确撤销，不再属于正式设定。
+- **PAUSED**：刻意停止推进，未经用户明确重开不得自动续写。
 
 ## 当前与 Prototype 的关系
 

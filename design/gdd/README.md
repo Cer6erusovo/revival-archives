@@ -8,6 +8,7 @@
 
 - `design/campaign/README.md`
 - `design/campaign/CURRENT-LOCKED-BASELINE.md`
+- `design/campaign/game-concept.md`
 - `design/campaign/concept-baseline.md`
 - `design/campaign/chapters/`
 

@@ -8,6 +8,7 @@
 | --- | --- |
 | `AGENTS.md` | 跨 GPT/Codex/Claude 的统一协作规则 |
 | `design/campaign/CURRENT-LOCKED-BASELINE.md` | 当前最高优先级的正式游戏设计基线 |
+| `design/campaign/game-concept.md` | 正式 Campaign 产品概念与范围 |
 | `design/campaign/` | 正式游戏的分主题设计文档 |
 | `design/campaign/decisions/` | 决策原因、否决方案，防止 AI 反复带偏 |
 | `design/campaign/canon/` | 原著锚点与能力撞车检查 |
