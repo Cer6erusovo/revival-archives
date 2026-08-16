@@ -195,7 +195,34 @@ rule_scope_status(r, new_facts) =
 
 ## Dependencies
 
-[To be designed]
+### Hard Upstream Dependencies
+
+| 系统 | 状态 | 提供的契约 |
+|---|---|---|
+| Campaign State & Event | Approved | 原子 event group、确定性状态归并、事实先于终止事件的顺序 |
+| Scene & Content Registry | Approved | 稳定 ID、事实来源、概念词、矛盾关系、证明要求及原著/同人来源分层 |
+| Spatial Scene Exploration | Approved | 玩家真正完成的观察、位置背景、现场动作和可感知结果 |
+
+缺少任意一个硬上游时，调查系统不得自行生成替代事实或猜测内容关系。
+
+### Downstream Consumers
+
+| 系统 | 关系 | 调查系统提供 |
+|---|---|---|
+| Consequence & Failure Explanation | 完整验证循环的硬依赖；GDD 未设计 | 已提交假设、预期结果、验证行动与当时已知事实 |
+| Field Interaction Presentation | 可玩呈现的硬依赖；GDD 未设计 | 当前可执行的观察、假设提交和验证反馈状态 |
+| Archive & Casebook | MVP 记录层消费者；GDD 未设计 | 事实、来源、矛盾、旧假设、验证历史和已确认规律 |
+| Narrative & Relationship State | 软依赖；GDD 未设计 | 人物已知事实与调查结果，不直接修改关系 |
+| Supernatural Cost & Growth | 后续消费者；当前 BLOCKED | 未来可读取规律与验证代价，但本 GDD 不定义第一只鬼 |
+| Audio & Atmosphere | 间接协作；GDD 未设计 | 不直接写入调查状态；声音必须先经场景观察转化为 fact |
+
+### Boundary Rules
+
+- Persistence 不直接依赖调查系统；它通过 Campaign State 保存完整 investigation partition。
+- Input / Accessibility 不改变判定公式；Field UI 必须按照已经批准的输入与无障碍契约呈现同一组 command。
+- 下游系统只能提交 command 或消费 event，不能直接修改事实、假设或规律状态。
+- 尚未设计的下游接口全部标记为 provisional；对应 GDD 完成时必须回填双向依赖。
+- 本系统不拥有场景后果、人物关系、音画表现、存档写入或第一只鬼能力。
 
 ## Tuning Knobs
 
