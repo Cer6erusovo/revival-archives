@@ -76,7 +76,102 @@ Investigation & Rule Reasoning 是正式 Campaign 中由玩家直接参与的调
 
 ## Formulas
 
-[To be designed]
+本系统没有伤害或概率数值；以下公式全部用于确定性判定。
+
+### 1. Hypothesis Well-Formed
+
+`hypothesis_well_formed(h) = has_scope(h) ∧ has_trigger(h) ∧ has_result(h) ∧ all_terms_unlocked(h)`
+
+| 变量 | 类型 | 范围 | 含义 |
+|---|---|---|---|
+| `has_scope` | boolean | `true / false` | 是否定义适用范围 |
+| `has_trigger` | boolean | `true / false` | 是否定义触发条件 |
+| `has_result` | boolean | `true / false` | 是否定义预期结果 |
+| `all_terms_unlocked` | boolean | `true / false` | 所有概念是否来自已观察事实 |
+
+**输出范围：** `true / false`。
+
+**示例：** 玩家填写了范围、触发和结果，但结果概念尚未被观察解锁，则假设只能保存为草稿，不能提交验证。
+
+### 2. Visible Contradiction
+
+`visible_contradiction(a, b) = observed(a) ∧ observed(b) ∧ incompatible_in_context(a, b)`
+
+| 变量 | 类型 | 范围 | 含义 |
+|---|---|---|---|
+| `observed(a)` | boolean | `true / false` | 事实 A 是否已被玩家观察 |
+| `observed(b)` | boolean | `true / false` | 事实 B 是否已被玩家观察 |
+| `incompatible_in_context` | boolean | `true / false` | 内容数据是否声明两条事实在相同条件下无法同时成立 |
+
+**输出范围：** `true / false`。
+
+**示例：** 玩家先观察到某扇门外是西楼梯，之后在同一时刻、同一扇门观察到门外仍是五楼走廊；两条事实均已获得且内容数据声明它们在该情境下不相容，因此显示矛盾，但不宣布哪条是真相。
+
+### 3. Validation Result
+
+```text
+validation_result(h, v) =
+  Refuted      if conditions_complete(v) ∧ contradicts_observation(h, v)
+  Supported    if conditions_complete(v) ∧ matches_prediction(h, v)
+  Inconclusive otherwise
+```
+
+| 变量 | 类型 | 范围 | 含义 |
+|---|---|---|---|
+| `conditions_complete` | boolean | `true / false` | 玩家已知的验证前提是否实际成立 |
+| `contradicts_observation` | boolean | `true / false` | 新观察是否与假设预测不相容 |
+| `matches_prediction` | boolean | `true / false` | 新观察是否符合假设预测 |
+
+**输出范围：** `Supported / Refuted / Inconclusive`。明确反证优先于支持，条件不完整永远返回 `Inconclusive`。
+
+**示例：** 玩家预测“下行后会回到原楼层”，验证条件完整，但实际抵达了不同且可确认的楼层，则结果为 `Refuted`。
+
+### 4. Confirmation Ready
+
+`confirmation_ready(h) = supported(h) ∧ all_requirements_satisfied(h) ∧ no_unresolved_refutation(h)`
+
+| 变量 | 类型 | 范围 | 含义 |
+|---|---|---|---|
+| `supported` | boolean | `true / false` | 至少一次完整验证支持该假设 |
+| `all_requirements_satisfied` | boolean | `true / false` | 该规律预设的全部证明条件是否满足 |
+| `no_unresolved_refutation` | boolean | `true / false` | 当前适用范围内是否不存在尚未解释的反证 |
+
+**输出范围：** `true / false`。
+
+**示例：** 某规律要求一次独立复现和一次受控验证。即使第一次结果符合预测，在两类证明都完成前也只能保持 `Supported`。
+
+### 5. Missing Evidence Categories
+
+`missing_evidence_categories(h) = unique(category(q) for q in requirements(h) if not satisfied(q))`
+
+| 变量 | 类型 | 范围 | 含义 |
+|---|---|---|---|
+| `requirements(h)` | requirement set | `0–N` 项 | 内容预设的证明要求 |
+| `satisfied(q)` | boolean | `true / false` | 某项要求是否满足 |
+| `category(q)` | enum | 预设类别 | 独立复现、不同对象、反例排除、受控验证等类别 |
+
+**输出范围：** 尚未满足的证据类别集合。
+
+**示例：** 系统可以显示“仍缺少独立复现”，但不能提示应该去哪一层、让谁执行或选择哪个动作。
+
+### 6. Rule Scope Status
+
+```text
+rule_scope_status(r, new_facts) =
+  Challenged if confirmed(r)
+             ∧ exists(new_facts, contradicts_prediction_within_scope)
+  Stable     otherwise
+```
+
+| 变量 | 类型 | 范围 | 含义 |
+|---|---|---|---|
+| `confirmed` | boolean | `true / false` | 规律是否已经确认 |
+| `new_facts` | fact set | `0–N` 条 | 确认后新观察到的事实 |
+| `contradicts_prediction_within_scope` | boolean | `true / false` | 新事实是否与规律在原适用范围内的预测冲突 |
+
+**输出范围：** `Stable / Challenged`。
+
+**示例：** 已确认规律在新的条件下出现反例，旧规律不会被删除或静默降级，而是标记为“适用范围受到挑战”，并允许玩家据此创建修订假设。
 
 ## Edge Cases
 
