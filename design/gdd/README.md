@@ -7,6 +7,7 @@
 正式游戏事实源已经迁移到：
 
 - `design/campaign/README.md`
+- `design/campaign/CURRENT-LOCKED-BASELINE.md`
 - `design/campaign/concept-baseline.md`
 - `design/campaign/chapters/`
 

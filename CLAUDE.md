@@ -6,10 +6,12 @@
 
 1. `AGENTS.md`
 2. `design/campaign/README.md`
-3. `design/campaign/concept-baseline.md`
-4. 当前正在工作的 chapter / character / supernatural 文档
-5. `design/campaign/decisions/decision-log.md`
-6. `HANDOFF.md`
+3. `design/campaign/CURRENT-LOCKED-BASELINE.md`
+4. `design/campaign/canon/original-work-anchors.md`
+5. `design/campaign/concept-baseline.md`
+6. 当前正在工作的 chapter / character / supernatural 文档
+7. `design/campaign/decisions/decision-log.md`
+8. `HANDOFF.md`
 
 如果旧 `design/gdd/` 与 `design/campaign/` 冲突，以后者为准；旧 GDD 是槐荫里 Prototype 证据。
 

@@ -6,12 +6,13 @@
 
 当文档冲突时，按以下顺序处理：
 
-1. 用户明确确认并记录在 `design/campaign/decisions/decision-log.md` 的 Locked 决策。
+1. `design/campaign/CURRENT-LOCKED-BASELINE.md` 与其后新增的 Locked 决策。旧 decision-log 条目若与该基线冲突，以该基线为准。
 2. `design/campaign/canon/original-work-anchors.md` 中已核对的原著锚点。
-3. `design/campaign/` 下标记为 Working 的当前设计。
-4. `HANDOFF.md` 的当前工作进度。
-5. 槐荫里 Prototype 设计和实现。
-6. Claude-Code-Game-Studios 的通用模板与默认假设。
+3. `design/campaign/decisions/decision-log.md` 中未被后续条目撤销的 Locked 决策。
+4. `design/campaign/` 下标记为 Working 的当前设计。
+5. `HANDOFF.md` 的当前工作进度。
+6. 槐荫里 Prototype 设计和实现。
+7. Claude-Code-Game-Studios 的通用模板与默认假设。
 
 禁止用旧 Prototype、框架默认模板或 AI 自己的偏好覆盖更高优先级事实。
 
@@ -22,9 +23,9 @@
 - 世界观与《神秘复苏》一致，但原创主角拥有独立传奇。
 - 主角是杨间同校生，七中事件时在邻近班级；不是杨间队友，也不跟着杨间重走原作剧情。
 - 第一案就是七中敲门鬼事件，不另造一个抢戏的“第一大事件”。
-- 主角第一只鬼为暂定代号“死锁”；内部机制是“锚定已经成立的关系”。
+- 主角第一只鬼当前为 **OPEN**；旧候选“死锁 / 关系锚定”已经撤销，不得当作正式设定。
 - 鬼影绝不能作为主角核心能力；那是杨间后续重要能力。
-- 主角长期强度上限要有资格达到杨间级别，但路径、能力体系和传奇必须独立。
+- 主角长期拥有进入同时代第一梯队的潜力，但路径、最终拼图和终局能力尚未锁定，不能提前绑定某个候选能力。
 - 白月光在七中失踪，后期真实重逢时已经不能算正常人；她不是普通驭鬼者式复活。
 - 现有槐荫里 Prototype 是玩法验证资产，不是 Campaign 正史。其鬼影、门牌能力和七日结构均不可默认继承。
 
