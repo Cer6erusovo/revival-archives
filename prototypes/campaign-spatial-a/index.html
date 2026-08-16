@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="复苏档案正式 Campaign 的 A 混合节点式空间交互原型。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2307110d'/%3E%3Cpath d='M7 5h18v14h-6v8H7z' fill='none' stroke='%23d8d4c6'/%3E%3Cpath d='M22 19v8' stroke='%23812b2b'/%3E%3C/svg%3E">
+  <title>复苏档案 · 空间交互原型 A</title>
+  <link rel="stylesheet" href="./prototype.css?v=a01">
+</head>
+<body>
+  <main class="prototype-shell" id="app">
+    <header class="topbar">
+      <div class="identity">
+        <span class="index-mark" aria-hidden="true"><i></i></span>
+        <div>
+          <p class="eyebrow">REVIVAL ARCHIVES / INTERACTION STUDY</p>
+          <h1>七中空间记录</h1>
+        </div>
+      </div>
+      <div class="location-readout" aria-live="polite">
+        <span id="locationCode">5F-C02</span>
+        <strong id="locationName">五楼 · 教室后门</strong>
+        <span id="viewDirection">朝向：西侧走廊</span>
+      </div>
+      <nav class="utility-nav" aria-label="原型工具">
+        <button type="button" class="utility-button" id="flashlightToggle" aria-pressed="true">
+          <span class="utility-key">F</span>
+          手电开启
+        </button>
+        <button type="button" class="utility-button" id="audioToggle" aria-pressed="true">
+          <span class="utility-key">M</span>
+          声音开启
+        </button>
+        <button type="button" class="utility-button" id="notesToggle" aria-expanded="false" aria-controls="notesPanel">
+          <span class="utility-key">N</span>
+          个人记录
+        </button>
+        <button type="button" class="utility-button utility-button--danger" id="resetButton">
+          重置
+        </button>
+      </nav>
+    </header>
+
+    <section class="scene-frame" aria-label="可交互现场">
+      <div class="scene-meta">
+        <span id="sceneTime">20:12</span>
+        <span class="scene-state" id="sceneState">照明：普通</span>
+        <span class="scene-objective" id="objective">先熟悉五楼空间，再前往西楼梯。</span>
+      </div>
+
+      <div class="scene" id="scene" tabindex="-1" data-node="classroom-door" data-view="forward">
+        <div class="world" id="world" aria-hidden="true"></div>
+        <div class="scene-vignette" aria-hidden="true"></div>
+        <div class="flashlight-beam" aria-hidden="true"></div>
+        <div class="scene-noise" aria-hidden="true"></div>
+        <div class="interactive-layer" id="interactiveLayer"></div>
+        <div class="transition-caption" id="transitionCaption" aria-hidden="true"></div>
+      </div>
+
+      <div class="orientation-controls" aria-label="观察方向">
+        <button type="button" id="lookLeft" aria-label="向左看">
+          <span aria-hidden="true">←</span>
+          向左看
+        </button>
+        <div class="orientation-center">
+          <span>当前视角</span>
+          <strong id="viewName">走廊方向</strong>
+        </div>
+        <button type="button" id="lookRight" aria-label="向右看">
+          向右看
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="action-deck" aria-label="当前动作">
+      <div class="action-context">
+        <p class="eyebrow">DIRECT ACTION</p>
+        <h2 id="actionTitle">站在教室后门</h2>
+        <p id="actionDescription">手电光落在门框和走廊地砖上。场景中的方形标记可以直接交互。</p>
+      </div>
+      <div class="action-buttons" id="actionButtons">
+        <span class="action-placeholder">选择场景中的物体或出口</span>
+      </div>
+      <div class="event-log" aria-live="polite">
+        <span class="event-index" id="eventIndex">OBS-000</span>
+        <p id="eventText">这是交互模型演示，不是正式剧情。先观察，再移动。</p>
+      </div>
+    </section>
+
+    <aside class="notes-panel" id="notesPanel" aria-hidden="true" aria-label="个人记录">
+      <div class="notes-header">
+        <div>
+          <p class="eyebrow">PERSONAL FIELD NOTES</p>
+          <h2>已确认事实</h2>
+        </div>
+        <button type="button" class="notes-close" id="notesClose" aria-label="关闭个人记录">×</button>
+      </div>
+      <ol class="fact-list" id="factList">
+        <li class="fact-empty">尚未主动确认任何事实。</li>
+      </ol>
+      <section class="hypothesis-section" id="hypothesisSection" hidden>
+        <p class="eyebrow">SPATIAL HYPOTHESIS</p>
+        <h3>这些重复意味着什么？</h3>
+        <div class="hypothesis-options">
+          <button type="button" data-hypothesis="lost">黑暗让人失去方向，实际上没有发生空间异常。</button>
+          <button type="button" data-hypothesis="identical">每层楼梯本来就完全相同。</button>
+          <button type="button" data-hypothesis="loop">移动发生了，但出口把人送回同一段楼梯。</button>
+        </div>
+        <p class="hypothesis-result" id="hypothesisResult" aria-live="polite"></p>
+      </section>
+      <div class="notes-footer">
+        <span>快捷键 N：打开 / 关闭</span>
+        <span>记录只保存主动观察所得</span>
+      </div>
+    </aside>
+
+    <dialog class="intro-dialog" id="introDialog">
+      <div class="dialog-index">PROTOTYPE / A-01</div>
+      <p class="eyebrow">FORMAL CAMPAIGN · THROWAWAY TEST</p>
+      <h2>混合节点式空间交互</h2>
+      <p>你会在固定空间节点之间移动，但每个节点内可以转向、控制手电、直接检查物体，并看到现场状态持续变化。</p>
+      <ul>
+        <li>鼠标移动控制手电；Tab 与 Enter 可完成全部操作。</li>
+        <li>方向键左右转向，F 开关手电，M 静音，N 打开记录。</li>
+        <li>没有第一只鬼、第五幕后续或正式剧情结论。</li>
+      </ul>
+      <button type="button" class="enter-button" id="enterPrototype">进入五楼</button>
+    </dialog>
+
+    <dialog class="end-dialog" id="endDialog">
+      <p class="eyebrow">INTERACTION PATH COMPLETE</p>
+      <h2>你完成了 A 模型演示</h2>
+      <p id="endSummary"></p>
+      <dl class="end-metrics">
+        <div><dt>移动节点</dt><dd id="metricMoves">0</dd></div>
+        <div><dt>主动观察</dt><dd id="metricFacts">0</dd></div>
+        <div><dt>空间假设</dt><dd id="metricHypothesis">未形成</dd></div>
+        <div><dt>遭遇选择</dt><dd id="metricEncounter">—</dd></div>
+      </dl>
+      <button type="button" class="enter-button" id="replayButton">重新体验</button>
+      <button type="button" class="dialog-secondary" id="closeEndButton">返回现场</button>
+    </dialog>
+  </main>
+
+  <script type="module" src="./prototype.js?v=a01"></script>
+</body>
+</html>
