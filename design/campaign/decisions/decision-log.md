@@ -4,6 +4,14 @@
 
 ## 2026-08-16
 
+### PROCESS — Campaign Concept gate 通过，进入 Systems Design
+
+**Decision:** 正式 Campaign 使用自己位于 `design/campaign/` 的 Game Concept、Art Bible、Systems Map 和 system contracts；槐荫里 Prototype 的 `design/gdd/` 与 `design/art/` 文件继续保留为 legacy evidence，不作为 Campaign gate 的通过证据。
+
+**Why:** 通用 workflow 路径已经存在 Prototype 成品，若只检查文件存在会产生“正式 Campaign 已设计完成”的假阳性。项目必须按内容归属而不是同名文件判断阶段。
+
+**Result:** 2026-08-16 Campaign Concept → Systems Design gate 为 PASS。四个不需要产品选择的 Foundation baselines 已建立；Spatial Scene Exploration 的交互模型是下一项需要用户决定的内容。
+
 ### PAUSED — 第一章场景与剧情停在第五幕入口
 
 **Decision:** 场景与剧情停在防火门打开、主角队伍进入七中长期封闭的旧后勤区域。第一只鬼、驾驭过程、白月光汇合与失踪机制、第五幕后续和第一章结局全部保持 **OPEN / PAUSED**。

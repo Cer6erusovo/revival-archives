@@ -8,11 +8,13 @@
 2. `design/campaign/README.md`
 3. `design/campaign/CURRENT-LOCKED-BASELINE.md`
 4. `design/campaign/game-concept.md`
-5. `design/campaign/canon/original-work-anchors.md`
-6. `design/campaign/concept-baseline.md`
-7. 当前正在工作的 chapter / character / supernatural 文档
-8. `design/campaign/decisions/decision-log.md`
-9. `HANDOFF.md`
+5. `design/campaign/art-bible.md`
+6. `design/campaign/systems-map.md`
+7. `design/campaign/canon/original-work-anchors.md`
+8. `design/campaign/concept-baseline.md`
+9. 当前正在工作的 chapter / character / supernatural 文档
+10. `design/campaign/decisions/decision-log.md`
+11. `HANDOFF.md`
 
 如果旧 `design/gdd/` 与 `design/campaign/` 冲突，以后者为准；旧 GDD 是槐荫里 Prototype 证据。
 

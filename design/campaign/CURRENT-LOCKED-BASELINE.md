@@ -4,11 +4,11 @@
 
 ## Status
 
-- CCGS phase: **Concept**
+- CCGS phase: **Systems Design**
 - Review mode: **lean**
 - Existing playable `槐荫里事件` remains a **Prototype**, not Campaign canon.
 - Do not move/rewrite current `src/`, Pages or saves merely for directory cleanliness.
-- Current design focus: **Campaign concept review**. Chapter 1 narrative is paused at the Act 5 legacy-area entry; first ghost selection remains **OPEN**.
+- Current design focus: **Foundation system contracts**. Chapter 1 narrative is paused at the Act 5 legacy-area entry; first ghost selection remains **OPEN**.
 
 ## Locked product identity
 
@@ -235,6 +235,6 @@ Sound-centered first ghosts are high-risk at Seven High because Knocking Ghost i
 
 Start by reading this baseline plus current Campaign docs.
 
-Do **not** continue Act 5 or first-ghost ideation by default. The current workflow is to review the formal Campaign concept with the user. After approval, separately propose a Campaign-specific art bible and systems map before a Concept gate review.
+Do **not** continue Act 5 or first-ghost ideation by default. The Campaign-specific Concept gate passed on 2026-08-16. Systems Design begins with Foundation contracts; Spatial Scene Exploration requires an explicit player-facing interaction-model decision before it is locked.
 
 The existing Huaiyinli Prototype remains stable and playable. Do not migrate or rewrite its code merely to satisfy the new document structure.

@@ -4,25 +4,27 @@
 
 ## 状态
 
-- Phase: Concept
+- Phase: Systems Design
 - Review mode: lean
 - Campaign implementation: 尚未开始
 - Opening chapter: 大昌市第七中学敲门鬼事件并行原创路线
 - Current refinement: 第一章第四幕结构与第五幕入口已锁定；后续剧情与第一只鬼为 OPEN / PAUSED
-- Current workflow: 正式 Campaign Concept 待用户审核
+- Current workflow: Foundation system contracts；随后确认 Spatial Scene Exploration 交互模型
 
 ## 阅读顺序
 
 1. `CURRENT-LOCKED-BASELINE.md` — 当前最高优先级基线
 2. `game-concept.md` — 正式 Campaign 产品概念
-3. `concept-baseline.md` — 整体产品方向
-4. `chapters/ch01-seven-high-school.md` — 第一章当前版本与停止线
-5. `narrative/protagonist.md` — 主角人格与长期成长
-6. `narrative/white-moonlight.md` — 白月光长期线
-7. `canon/original-work-anchors.md` — 已核对的原著事实
-8. `canon/ability-collision-blacklist.md` — 原著能力撞车禁区
-9. `decisions/decision-log.md` — 设计取舍与被否决/撤销方案
-10. `supernatural/deadlock.md` — 已撤销的“死锁”候选档案，仅供避免设计回退
+3. `art-bible.md` — 正式 Campaign 视觉、界面、动效与资产约束
+4. `systems-map.md` — 正式 Campaign 系统边界、依赖与设计顺序
+5. `concept-baseline.md` — 整体产品方向
+6. `chapters/ch01-seven-high-school.md` — 第一章当前版本与停止线
+7. `narrative/protagonist.md` — 主角人格与长期成长
+8. `narrative/white-moonlight.md` — 白月光长期线
+9. `canon/original-work-anchors.md` — 已核对的原著事实
+10. `canon/ability-collision-blacklist.md` — 原著能力撞车禁区
+11. `decisions/decision-log.md` — 设计取舍与被否决/撤销方案
+12. `supernatural/deadlock.md` — 已撤销的“死锁”候选档案，仅供避免设计回退
 
 ## 状态标签
 

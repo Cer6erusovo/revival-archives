@@ -2,9 +2,9 @@
 
 > Created: 2026-08-16
 >
-> Status: DRAFT — Campaign concept consolidation
+> Status: WORKING — Concept gate baseline
 >
-> CCGS phase: Concept
+> CCGS phase: Systems Design (Concept gate passed 2026-08-16)
 >
 > Review profile: lean
 
@@ -141,6 +141,17 @@ Fellowship 和 Submission 不是当前核心目标：本作是单人体验，也
 - 不是无代价的超能力爽游；
 - 不是只靠文字卡片推进的静态页面；
 - 不以廉价跳吓或血腥堆砌替代规则恐怖。
+
+### 8.7 Visual Identity Anchor
+
+**视觉规则：先让校园、人物与调查工具像一个真实可用的中国日常世界，再让灵异只破坏其中一条可信的秩序。**
+
+- 正常先可信：正常阶段优先建立可记忆的空间、人物和物件关系。
+- 异常要局部而准确：用错位、缺失、重复或声音距离破坏一个具体事实，不用满屏故障代替恐怖。
+- 现场先于界面：场景、声音和动作承担调查，UI 只负责操作、记录与复盘。
+- 恐怖必须可读：危险可以不完整，但不能因画面过暗、动效过强或纯声音谜题变成随机失败。
+
+完整视觉约束见 [art-bible.md](art-bible.md)。
 
 ## 9. 第一章边界
 
@@ -281,10 +292,10 @@ MVP 在这里指“最小可验证版本”，用于验证核心体验，而不�
 
 ## 15. 下一步
 
-1. 由用户审核本文档；
-2. 单独建立正式 Campaign Art Bible；
-3. 单独建立正式 Campaign Systems Map；
-4. 按 lean 标准完成 Concept 阶段检查；
-5. 只有用户确认 Concept 阶段通过后，才进入 Systems Design。
+1. 正式 Campaign Art Bible 已建立；
+2. 正式 Campaign Systems Map 已建立；
+3. Concept → Systems Design gate 已于 2026-08-16 通过；
+4. 当前进入 Foundation system contracts；
+5. Spatial Scene Exploration 开始详细设计前，确认正式 Campaign 的交互模型。
 
 第一只鬼和第五幕续写不在当前下一步中。

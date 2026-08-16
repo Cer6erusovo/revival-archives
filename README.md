@@ -18,9 +18,11 @@
 2. [`design/campaign/README.md`](design/campaign/README.md) — 正式 Campaign 设计入口与当前进度。
 3. [`design/campaign/CURRENT-LOCKED-BASELINE.md`](design/campaign/CURRENT-LOCKED-BASELINE.md) — 当前最高优先级的设计基线。
 4. [`design/campaign/game-concept.md`](design/campaign/game-concept.md) — 正式 Campaign 产品概念。
-5. [`design/campaign/concept-baseline.md`](design/campaign/concept-baseline.md) — 已锁定的产品方向。
-6. [`design/campaign/chapters/ch01-seven-high-school.md`](design/campaign/chapters/ch01-seven-high-school.md) — 第一章当前打磨结果与停止线。
-7. [`design/campaign/decisions/decision-log.md`](design/campaign/decisions/decision-log.md) — 为什么这么设计，以及哪些方案被否决或撤销。
+5. [`design/campaign/art-bible.md`](design/campaign/art-bible.md) — 正式 Campaign 视觉与资产约束。
+6. [`design/campaign/systems-map.md`](design/campaign/systems-map.md) — 正式 Campaign 系统范围与依赖。
+7. [`design/campaign/concept-baseline.md`](design/campaign/concept-baseline.md) — 已锁定的产品方向。
+8. [`design/campaign/chapters/ch01-seven-high-school.md`](design/campaign/chapters/ch01-seven-high-school.md) — 第一章当前打磨结果与停止线。
+9. [`design/campaign/decisions/decision-log.md`](design/campaign/decisions/decision-log.md) — 为什么这么设计，以及哪些方案被否决或撤销。
 
 主角第一只鬼当前仍为 **OPEN**。`design/campaign/supernatural/deadlock.md` 只保存已撤销的“死锁”候选历史，不是正式设定。
 

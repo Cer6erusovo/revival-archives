@@ -1,7 +1,7 @@
 # Revival Archives — Current Handoff
 
 *Updated: 2026-08-16*
-*Stage: Concept*
+*Stage: Systems Design*
 *Review mode: lean*
 
 ## Read first
@@ -12,9 +12,11 @@
 2. `design/campaign/README.md`
 3. `design/campaign/CURRENT-LOCKED-BASELINE.md`
 4. `design/campaign/game-concept.md`
-5. `design/campaign/concept-baseline.md`
-6. `design/campaign/chapters/ch01-seven-high-school.md`
-7. `design/campaign/decisions/decision-log.md`
+5. `design/campaign/art-bible.md`
+6. `design/campaign/systems-map.md`
+7. `design/campaign/concept-baseline.md`
+8. `design/campaign/chapters/ch01-seven-high-school.md`
+9. `design/campaign/decisions/decision-log.md`
 
 ## Current truth
 
@@ -25,6 +27,7 @@
 - 主角第一只鬼当前为 **OPEN**；“死锁 / 关系锚定”已经撤销，只保留为候选历史。
 - 第一章场景与剧情已经主动暂停在第五幕旧后勤区域入口；未经用户明确重开，不继续生成第一只鬼或后续剧情。
 - 白月光在七中失踪；后续利用原著饿死鬼阶段杨间再次返回七中的节点重新出现线索；很后期真实重逢时她已不是正常人。
+- Campaign Concept gate 已于 2026-08-16 通过；Art Bible、Systems Map 和四个 Foundation baselines 已建立。
 
 ## Current design position
 
@@ -41,7 +44,7 @@
 
 第三幕结尾为电话中的两人都确认自己在西楼梯，镜头展示相同楼梯坐标上的两个不同空间；随后通讯失真并中断。
 
-**当前流程：由用户审核正式 Campaign Concept。** 审核通过后，再分别提出 Campaign 专属 Art Bible 与 Systems Map 方案并等待确认，最后进行 Concept gate。不要继续 Act 5、第一只鬼、第二章或 Campaign 代码。
+**当前流程：Systems Design。** Campaign State & Event、Scene & Content Registry、Input/Accessibility、Campaign Persistence 已形成 lean baseline。下一步必须先确定 Spatial Scene Exploration 的玩家交互模型，再写该系统 GDD 和最小校园空间原型。不要继续 Act 5、第一只鬼、第二章或 Campaign 代码。
 
 ## Existing prototype verification
 

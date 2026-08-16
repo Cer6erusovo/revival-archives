@@ -9,7 +9,9 @@
 - `design/campaign/README.md`
 - `design/campaign/CURRENT-LOCKED-BASELINE.md`
 - `design/campaign/game-concept.md`
+- `design/campaign/art-bible.md`
+- `design/campaign/systems-map.md`
 - `design/campaign/concept-baseline.md`
 - `design/campaign/chapters/`
 
-等正式 Concept 通过评审后，再决定是否把这里的 legacy 文件物理迁入 `design/prototype/huaiyinli/`，以免在当前阶段制造无收益的大范围文件移动。
+正式 Campaign Concept gate 已通过，但这里仍是 legacy Prototype GDD。是否物理迁入 `design/prototype/huaiyinli/` 必须单独评审，不要为了目录整洁制造无收益的大范围移动。
