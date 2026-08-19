@@ -1,6 +1,8 @@
 # ADR-001: Use the Browser as the Game Runtime
 
-*Status: Accepted — 2026-08-13*
+*Status: Accepted for Huaiyinli Prototype; deprecated for formal Campaign — 2026-08-20*
+
+*Replacement:* ADR-003 proposes Godot 4 native desktop for the formal Campaign. This ADR remains valid historical evidence for the existing Web Prototype and must not be used to migrate or delete it.
 
 ## Context
 

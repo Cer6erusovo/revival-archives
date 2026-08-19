@@ -2,6 +2,8 @@
 
 *Status: Accepted — 2026-08-13*
 
+*2026-08-20 scope note:* The separation of deterministic state from authored content remains a useful principle. Its TypeScript, DOM and browser-specific implementation applies to the Huaiyinli Prototype; the formal Godot Campaign requires a follow-up architecture review before reusing it.
+
 ## Context
 
 The game needs seven days of authored choices, cross-run archive unlocks, qualitative resurrection signs and multiple explainable endings. Embedding story text and mutable state in DOM handlers would make rule coverage and save compatibility fragile.

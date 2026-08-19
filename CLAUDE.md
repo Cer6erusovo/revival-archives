@@ -20,11 +20,10 @@
 
 ## Technology Stack
 
-- Engine/runtime: modern Web browser
-- Language: TypeScript
-- Build: Vite
-- Current playable implementation: Huaiyinli Prototype
-- Current product stage: Systems Design
+- Formal Campaign engine/runtime: Godot 4, native desktop, first-person 3D direction
+- Formal Campaign language/build: OPEN until the Godot architecture ADR is accepted
+- Current playable implementation: Huaiyinli Web Prototype (TypeScript/Vite), retained separately
+- Current product stage: Systems Design rebaseline
 - Review mode: lean
 
 ## Collaboration

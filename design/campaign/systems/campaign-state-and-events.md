@@ -1,12 +1,14 @@
 # System GDD: Campaign State & Event
 
-> Status: APPROVED — lean formal review 2026-08-17
+> Status: **IMPACT REVIEW REQUIRED — 2026-08-20 runtime change**
 >
 > Created: 2026-08-16
 >
 > System map ID: 1
 >
 > Scope: Formal Campaign only
+
+> Rebaseline note: 状态所有权、原子 command / event 与确定性原则继续有效；DOM、TypeScript 和旧 node/viewpoint 字段不能直接视为 Godot 实现合同，需随第一人称空间 GDD 复审。
 
 ## 1. Overview
 
@@ -32,7 +34,7 @@ Campaign State & Event 是正式 Campaign 的确定性事实中心。它保存�
 - actors：在场、失踪、受伤、已知事实和关系语义状态；
 - investigation：观察事实、来源、假设和验证结果；
 - narrative：通话、承诺、对话分支与已发生叙事事件；
-- supernatural：只预留由后续系统拥有的引用；第一只鬼 PAUSED 时不得填充实例；
+- supernatural：只预留由后续系统拥有的引用；鬼锁能力实例未定义前不得填充具体能力字段；
 - progression：只保存已由 Chapter & World Progression 确认的长期结果。
 
 ### 3.2 Command lifecycle
@@ -94,7 +96,7 @@ Valid(command) = SchemaValid ∧ RevisionMatches ∧ PreconditionsMet ∧ Target
 - Partial reducer failure：整组 event 不提交，不能留下半个后果。
 - Scene transition interrupted：只恢复最后一次已提交 checkpoint，不保存过渡动画中间态。
 - Unknown future field：加载时交由 Persistence migration；State 不静默删除。
-- PAUSED supernatural content：任何 command 若引用未定义第一只鬼实例，必须被 schema 或 content validation 拒绝。
+- OPEN supernatural content：任何 command 若引用尚未定义的鬼锁能力实例，必须被 schema 或 content validation 拒绝。
 - Ending or death event：先提交导致结果的事实，再提交结束状态，保证复盘能看到原因链。
 
 ## 6. Dependencies

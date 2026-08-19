@@ -18,31 +18,31 @@
 
 系统边界围绕“现场、规律、后果、长期状态”建立。它不是传统战斗 RPG，因此不需要伤害、装备、掉落、刷怪或传统技能树系统。
 
-本图只回答“需要哪些系统、彼此依赖什么、先设计什么”。它不替代单个系统 GDD，也不为 OPEN / PAUSED 的第一只鬼补写能力。
+本图只回答“需要哪些系统、彼此依赖什么、先设计什么”。第一只鬼已经确定为鬼锁，但破解、救援、防御、驾驭和长期能力仍只能在对应设计中确认。
 
 ## 2. Systems Enumeration
 
 | # | System | Category | Source | Priority | Depends On | Status |
 |---|---|---|---|---|---|---|
-| 1 | [Campaign State & Event](systems/campaign-state-and-events.md) | Foundation | Implicit | MVP | — | Approved |
-| 2 | [Scene & Content Registry](systems/scene-content-registry.md) | Foundation | Explicit | MVP | — | Approved |
-| 3 | [Input, Settings & Accessibility Contract](systems/input-settings-accessibility.md) | Meta/Foundation | Explicit | MVP | — | Approved |
-| 4 | [Versioned Campaign Persistence](systems/campaign-persistence.md) | Persistence | Explicit | MVP | 1, 2 | Approved |
-| 5 | [Spatial Scene Exploration](systems/spatial-scene-exploration.md) | Core Gameplay | Explicit | MVP | 1, 2, 3 | Approved — functional spike is evidence only |
+| 1 | [Campaign State & Event](systems/campaign-state-and-events.md) | Foundation | Implicit | MVP | — | Impact review — engine binding changed |
+| 2 | [Scene & Content Registry](systems/scene-content-registry.md) | Foundation | Explicit | MVP | — | Impact review — 3D scene model changed |
+| 3 | [Input, Settings & Accessibility Contract](systems/input-settings-accessibility.md) | Meta/Foundation | Explicit | MVP | — | Redesign required — first-person desktop |
+| 4 | [Versioned Campaign Persistence](systems/campaign-persistence.md) | Persistence | Explicit | MVP | 1, 2 | Redesign required — browser storage removed |
+| 5 | [First-Person Spatial Exploration](systems/first-person-spatial-exploration.md) | Core Gameplay | Explicit | MVP | 1, 2, 3 | Working — direction locked, GDD pending |
 | 6 | Investigation & Rule Reasoning | Core Gameplay | Explicit | MVP | 1, 2, 5 | Not Started |
 | 7 | Consequence & Failure Explanation | Core Gameplay | Explicit | MVP | 1, 2, 6 | Not Started |
 | 8 | Narrative & Relationship State | Narrative | Explicit | MVP thin slice / VS full | 1, 2, 7 | Not Started |
 | 9 | Field Interaction Presentation | Presentation | Explicit | MVP | 3, 5, 6, 7, 8 | Not Started |
 | 10 | Archive & Casebook | Presentation/Narrative | Explicit | MVP | 3, 4, 6, 8 | Not Started |
 | 11 | Audio & Atmosphere | Presentation | Explicit | MVP | 1, 2, 3, 5, 7 | Not Started |
-| 12 | Supernatural Cost & Growth | Progression | Explicit | Vertical Slice | 1, 2, 6, 7, 8 | BLOCKED — first ghost PAUSED |
+| 12 | Supernatural Cost & Growth | Progression | Explicit | Vertical Slice | 1, 2, 6, 7, 8 | BLOCKED — 鬼锁 driving/cost OPEN |
 | 13 | Chapter & World Progression | Progression | Explicit | Alpha | 1, 2, 4, 8, 12 | Not Started |
 
 ### 2.1 为什么需要这些隐含系统
 
 - 场景探索需要一个独立的 Campaign state；否则地点、人物和后果会散落在 DOM 与文本里。
 - 章节内容需要可验证的 registry；否则原著锚点、项目选择和可交互内容容易混写。
-- Web 游戏的输入、音量、reduced motion 和键盘规则必须先成为契约，不能等 UI 完成后补救。
+- 第一人称桌面游戏的键鼠、视野角、晕动症设置、字幕和静音替代必须先成为契约，不能等场景完成后补救。
 - 长期 Campaign 必须使用独立、版本化存档，不能让 Prototype 的 localStorage 状态泄漏进正式剧情。
 - 失败必须由 consequence resolver 指向已观察或可回溯的原因，不能只播放死亡文本。
 
@@ -66,7 +66,7 @@
 
 ### 3.5 Spatial Scene Exploration
 
-负责玩家如何理解位置、选择移动、查看方向、接近交互物和识别空间异常。采用用户确认的 A 模型：固定空间节点 + 节点内有限转向、手电、局部观察与直接交互。不是纯点击换页，也不是自由移动。
+负责玩家如何在连续 3D 空间中移动、转头、控制视线、理解距离、接近交互物和识别空间异常。正式 Campaign 采用第一人称方向；旧 A 混合节点式只保留为 Web 历史证据。详细移动与交互合同尚待评审。
 
 ### 3.6 Investigation & Rule Reasoning
 
@@ -82,7 +82,7 @@
 
 ### 3.9 Field Interaction Presentation
 
-把场景、动作、反馈、人物和当前可知状态呈现在浏览器中。它只派发 command 和渲染事件，不拥有游戏规则。
+把 3D 场景、动作、反馈、人物和当前可知状态呈现在 Godot 运行时中。它只派发 command 和渲染事件，不拥有游戏规则。
 
 ### 3.10 Archive & Casebook
 
@@ -94,7 +94,7 @@
 
 ### 3.12 Supernatural Cost & Growth
 
-未来负责能力触发、适用边界、代价、复苏/异化症状和灵异拼图。当前只锁定系统职责，不定义第一只鬼、数值或成长树。
+未来负责能力触发、适用边界、代价、复苏/异化症状和灵异拼图。第一只鬼身份已锁定为鬼锁，但本系统不得在玩法规律确认前自动补写数值或成长树。
 
 ### 3.13 Chapter & World Progression
 
@@ -152,7 +152,7 @@ Persistence + Narrative + Supernatural ─────> World Progression
 
 - Campaign State & Event：所有运行系统共享的事实边界；
 - Scene & Content Registry：所有可玩内容和原著/同人分层的来源；
-- Spatial Scene Exploration：决定 Web 端是否真的有“在现场”的交互；
+- First-Person Spatial Exploration：决定连续空间是否真的承担距离、视线、门状态和救援压力；
 - Investigation & Rule Reasoning：决定规则恐怖是否成立；
 - Consequence & Failure Explanation：决定失败是否公平且可复盘。
 
@@ -173,7 +173,7 @@ MVP 使用系统 1–11 的最小切片，验证：
 - 玩家能形成并验证至少一个假设；
 - 失败或后果能指出原因链；
 - 人物、通话和关系状态参与选择；
-- 场景、档案、声音、存档和键盘操作共同完成一条浏览器路径。
+- 场景、档案、声音、存档和键鼠操作共同完成一条桌面运行路径。
 
 “系统属于 MVP”不等于一次实现其完整 Campaign 能力。例如 Narrative 在 MVP 中只覆盖第一至第四幕需要的人物状态，Archive 只覆盖当前事件的个人记录。
 
@@ -186,7 +186,7 @@ MVP 使用系统 1–11 的最小切片，验证：
 - 白月光事件在本章的完整后果；
 - 完整章节重试、保存和质量表现。
 
-该层当前被第一只鬼和第五幕 PAUSED 阻塞，不能靠系统文档绕过。
+该层当前被鬼锁的 counterplay、驾驭和第五幕后续阻塞，不能靠系统文档绕过。
 
 ### 6.3 Alpha
 
@@ -211,27 +211,27 @@ MVP 使用系统 1–11 的最小切片，验证：
 | 2 | Scene & Content Registry | MVP | Foundation | M | 让场景、事实、原著锚点和项目设定保持可追踪 |
 | 3 | Input, Settings & Accessibility Contract | MVP | Foundation | S | 在任何界面设计前锁定键盘、声音与动效底线 |
 | 4 | Versioned Campaign Persistence | MVP | Core | S | 提前隔离 Prototype 与 Campaign 数据 |
-| 5 | Spatial Scene Exploration | MVP | Core | L | 最高体验风险；决定“在现场”是否成立 |
+| 5 | First-Person Spatial Exploration | MVP | Core | L | 最高体验风险；决定“在现场”是否成立 |
 | 6 | Investigation & Rule Reasoning | MVP | Core | L | 核心规则调查循环 |
 | 7 | Consequence & Failure Explanation | MVP | Core | M | 让验证风险公平、失败可复盘 |
 | 8 | Narrative & Relationship State | MVP/VS | Feature | M | 让普通生活与人物选择拥有系统后果 |
-| 9 | Field Interaction Presentation | MVP | Presentation | L | 把核心系统变成真实浏览器操作 |
+| 9 | Field Interaction Presentation | MVP | Presentation | L | 把核心系统变成真实第一人称操作 |
 | 10 | Archive & Casebook | MVP | Presentation | M | 支持跨场景核对而不替玩家解题 |
 | 11 | Audio & Atmosphere | MVP | Presentation | M | 声音是空间判断与恐怖反馈的一部分 |
-| 12 | Supernatural Cost & Growth | VS | Feature | L | 必须等第一只鬼设计重开 |
+| 12 | Supernatural Cost & Growth | VS | Feature | L | 必须等鬼锁驾驭与代价确认 |
 | 13 | Chapter & World Progression | Alpha | Feature | L | 先有完整单章再设计长期扩展 |
 
 ## 8. High-Risk Systems
 
 | System | Risk | Why | Mitigation |
 |---|---|---|---|
-| Spatial Scene Exploration | Design / Technical | 过于抽象会退化成卡片，过于自由会超出个人 Web 项目范围 | 在 GDD 中比较 2–3 种交互模型，再做一段正常校园与一段鬼域路线原型 |
+| First-Person Spatial Exploration | Design / Technical | 空 3D 走路不能自动产生现场感，人物、灯光、声音和关卡资产成本会明显上升 | 先做走廊、两间教室、厕所隔间、门上玻璃和一名受困者的窄验证切片 |
 | Investigation & Rule Reasoning | Design | UI 可能替玩家自动解题，或线索不足导致猜答案 | 每条规律记录事实、来源、验证动作和错误反馈 |
 | Consequence & Failure Explanation | Design | 随机死亡会破坏公平感，过度预警又会失去恐怖 | 为每个关键后果建立可观察原因链与复盘记录 |
 | Narrative & Relationship State | Scope | 容易退化为好感度条或分支爆炸 | 使用少量有语义的关系/承诺状态，并限制每章可变节点 |
-| Audio & Atmosphere | Browser / Accessibility | 自动播放限制、设备差异和纯声音谜题 | 用户手势启用、分轨音量、非听觉备份和实机试听 |
-| Persistence | Data integrity | 正式存档污染 Prototype 或未来版本无法读取 | 独立 key、schema version、迁移测试和安全重置 |
-| Supernatural Cost & Growth | Design / Canon | 第一只鬼未定，能力易撞原著或变成技能树 | 保持 BLOCKED；重开后先做能力撞车与野生规律检查 |
+| Audio & Atmosphere | Desktop / Accessibility | 设备差异、空间音频误导和纯声音谜题 | 分轨音量、字幕 / 视觉备份和不同设备实机试听 |
+| Persistence | Data integrity | Godot 存档方案未定，且不得污染 Prototype | 重写存档介质合同，保留 schema version、迁移测试和安全重置原则 |
+| Supernatural Cost & Growth | Design / Canon | 鬼锁能力尚未定义，易滑向万能封印或技能树 | 保持 BLOCKED；先完成野生规律、救援、防御、驾驭和能力撞车检查 |
 
 ## 9. Explicitly Excluded
 
@@ -251,26 +251,26 @@ MVP 使用系统 1–11 的最小切片，验证：
 | MVP systems / slices | 11 |
 | Vertical Slice-only systems | 1 |
 | Alpha-first systems | 1 |
-| System GDDs started | 5 |
-| Lean formally reviewed GDDs | 5 |
-| System GDDs approved | 5 |
-| Blocked systems | 1 |
+| System GDDs started | 6 |
+| Lean formally reviewed GDDs | 5 (previous Web baseline) |
+| System GDDs currently reusable without impact review | 1 (Investigation & Rule Reasoning, still In Design) |
+| Systems requiring first-person / Godot rebaseline | 5 |
 
 ## 11. Lean Self-Review
 
 - 13 个系统共同覆盖了现场、规律、后果、人物、音画、存档和长期成长，没有引入传统战斗或 MMO 范围。
-- 所有 MVP 系统都能追溯到核心循环或 Web 可用性要求；没有仅为“以后也许有用”而加入的系统。
+- 所有 MVP 系统都能追溯到核心循环或第一人称桌面可用性要求；没有仅为“以后也许有用”而加入的系统。
 - 依赖图没有硬循环，潜在 narrative/consequence 循环已有事件边界。
 - Prototype 与 Campaign 的系统、入口和存档保持分离。
-- Supernatural Cost & Growth 明确阻塞，没有通过系统图偷定第一只鬼。
-- Foundation 1–4 与 Spatial Scene Exploration 已完成 lean 正式评审并批准；评审记录位于 `systems/reviews/`。
-- Spatial Scene Exploration 技术 Spike 仅验证浏览器功能路径，不承担现场感验收。
+- Supernatural Cost & Growth 明确阻塞，没有通过系统图偷定鬼锁能力。
+- Foundation 1–4 与旧 Spatial Scene Exploration 曾完成 lean 正式评审；评审记录继续作为历史证据，不自动覆盖 Godot 方向。
+- 旧 Spatial Scene Exploration 技术 Spike 仅验证浏览器功能路径，不承担现场感验收。
 - TD-SYSTEM-BOUNDARY、PR-SCOPE 与 CD-SYSTEMS 独立代理审查未运行；lean 流程下这些不是 PHASE-GATE。
 
 ## 12. Next
 
 1. Campaign Concept → Systems Design gate 已于 2026-08-16 通过；
-2. Foundation 1–4 与 Spatial Scene Exploration GDD 已批准；
-3. Spatial Scene Exploration A 技术 Spike 已完成浏览器功能验证，但不是体验门禁；
-4. 下一项按设计顺序进入 Investigation & Rule Reasoning；
-5. 第一只鬼和第五幕保持 PAUSED。
+2. 第一只鬼鬼锁与第一轮猎杀结构已锁定；
+3. 正式 Campaign 已从 A 混合节点 Web 方案转向 Godot 4 第一人称 3D；
+4. 先完成空间、输入、存档、表现与架构重基线；
+5. 下一项需要用户参与的设计决策是鬼锁的识别、预警、防御与救援形式。

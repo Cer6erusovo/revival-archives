@@ -1,6 +1,6 @@
 # Revival Archives / 复苏档案
 
-《神秘复苏》世界观下的非商业单人 Web 同人游戏项目。
+《神秘复苏》世界观下的非商业单人第一人称 3D 桌面同人游戏项目。
 
 > 本项目不是官方作品，也不代表获得原作者、出版方或改编作品权利方授权。项目不复制小说原文，不使用官方或商业美术、Logo 和音频素材。
 
@@ -24,13 +24,13 @@
 8. [`design/campaign/chapters/ch01-seven-high-school.md`](design/campaign/chapters/ch01-seven-high-school.md) — 第一章当前打磨结果与停止线。
 9. [`design/campaign/decisions/decision-log.md`](design/campaign/decisions/decision-log.md) — 为什么这么设计，以及哪些方案被否决或撤销。
 
-主角第一只鬼当前仍为 **OPEN**。`design/campaign/supernatural/deadlock.md` 只保存已撤销的“死锁”候选历史，不是正式设定。
+主角第一只鬼已经确定为 **鬼锁**。当前锁定了逐间关门落锁、第一批学生全灭与厕所隔间提示结构；破解、救人、防御、驾驭和长期能力仍为 **OPEN**。详见 `design/campaign/supernatural/ghost-lock.md`。`design/campaign/supernatural/deadlock.md` 只保存已撤销的旧候选历史。
 
 不要只读旧的 `design/gdd/game-concept.md`：它描述的是槐荫里 Prototype，不是完整游戏。
 
 ## 当前试玩
 
-GitHub Pages 根路径仍发布现有槐荫里 Prototype。正式 Campaign 尚未进入实现阶段，暂不移动现有 `src/`，避免破坏已验证试玩和存档。
+GitHub Pages 根路径仍发布现有槐荫里 Web Prototype。正式 Campaign 已转向 Godot 4 第一人称桌面方向，但尚未开始迁移；暂不移动现有 `src/`，避免破坏已验证试玩和存档。
 
 ```bash
 npm ci
@@ -41,4 +41,4 @@ npm run dev
 
 ## 框架
 
-项目基于 `Donchitos/Claude-Code-Game-Studios` 工作流建立。当前阶段为 `Concept`，评审模式为 `lean`。
+项目基于 `Donchitos/Claude-Code-Game-Studios` 工作流建立。当前阶段为 `Systems Design rebaseline`，评审模式为 `lean`。

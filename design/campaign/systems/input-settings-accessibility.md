@@ -1,12 +1,14 @@
 # System GDD: Input, Settings & Accessibility Contract
 
-> Status: APPROVED — lean formal review 2026-08-17
+> Status: **SUPERSEDED BASELINE — first-person desktop redesign required**
 >
 > Created: 2026-08-16
 >
 > System map ID: 3
 >
 > Scope: Formal Campaign only
+
+> Rebaseline note: 本文保存旧 Web 输入与无障碍合同。正式 Campaign 必须新增第一人称键鼠、视野角、鼠标灵敏度、头部晃动、动态模糊、字幕与晕动症设置；旧 browser zoom、DOM focus 和 autoplay 条款不再构成完整合同。
 
 ## 1. Overview
 

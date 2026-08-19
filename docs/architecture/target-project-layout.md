@@ -1,6 +1,8 @@
 # Target Project Layout — Campaign / Prototype Split
 
-*Status: DESIGN TARGET, not an immediate migration order.*
+*Status: HISTORICAL WEB DESIGN TARGET — superseded for formal Campaign on 2026-08-20.*
+
+正式 Campaign 已转向 Godot 4 第一人称 3D。下述 TypeScript / Web 目录规划只解释此前 Campaign 与 Prototype 的拆分思路，不是当前迁移命令。新的 Godot 工程布局必须在 ADR-003 接受并确认脚本语言后另行设计。
 
 当前根 `src/` 是已验证可运行的槐荫里 Prototype。正式 Campaign 第一章设计完成并通过 gate 前，不为“目录整洁”破坏它。
 

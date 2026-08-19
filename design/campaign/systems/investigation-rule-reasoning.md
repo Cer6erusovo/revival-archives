@@ -4,7 +4,7 @@
 >
 > **Author**: User + Codex
 >
-> **Last Updated**: 2026-08-17
+> **Last Updated**: 2026-08-20 — first-person / 鬼锁 impact checked; core reasoning contract retained
 >
 > **System Map ID**: 6
 >
@@ -68,7 +68,7 @@ Investigation & Rule Reasoning 是正式 Campaign 中由玩家直接参与的调
 |---|---|---|
 | Campaign State & Event | 已提交行动与事件顺序 | 事实、假设、验证和规律状态事件 |
 | Scene & Content Registry | 事实来源、概念词、矛盾关系、确认条件 | 已解锁内容 ID 与引用状态 |
-| Spatial Scene Exploration | 玩家实际完成的观察和现场行动 | 可执行验证意图，不直接修改空间 |
+| First-Person Spatial Exploration | 玩家实际完成的观察和现场行动 | 可执行验证意图，不直接修改空间 |
 | Consequence & Failure Explanation | 验证行动产生的后果 | 玩家当时采用的假设、预期结果和原因链 |
 | Field Interaction Presentation | 当前可观察对象与反馈位置 | 观察、标记矛盾、提交验证所需的信息 |
 | Archive & Casebook | — | 已观察事实、旧假设、确认规律和验证历史 |
@@ -199,9 +199,9 @@ rule_scope_status(r, new_facts) =
 
 | 系统 | 状态 | 提供的契约 |
 |---|---|---|
-| Campaign State & Event | Approved | 原子 event group、确定性状态归并、事实先于终止事件的顺序 |
-| Scene & Content Registry | Approved | 稳定 ID、事实来源、概念词、矛盾关系、证明要求及原著/同人来源分层 |
-| Spatial Scene Exploration | Approved | 玩家真正完成的观察、位置背景、现场动作和可感知结果 |
+| Campaign State & Event | Impact review required | 原子 event group、确定性状态归并、事实先于终止事件的顺序 |
+| Scene & Content Registry | Impact review required | 稳定 ID、事实来源、概念词、矛盾关系、证明要求及原著/同人来源分层 |
+| First-Person Spatial Exploration | Working | 玩家真正完成的观察、位置背景、现场动作和可感知结果 |
 
 缺少任意一个硬上游时，调查系统不得自行生成替代事实或猜测内容关系。
 
@@ -213,7 +213,7 @@ rule_scope_status(r, new_facts) =
 | Field Interaction Presentation | 可玩呈现的硬依赖；GDD 未设计 | 当前可执行的观察、假设提交和验证反馈状态 |
 | Archive & Casebook | MVP 记录层消费者；GDD 未设计 | 事实、来源、矛盾、旧假设、验证历史和已确认规律 |
 | Narrative & Relationship State | 软依赖；GDD 未设计 | 人物已知事实与调查结果，不直接修改关系 |
-| Supernatural Cost & Growth | 后续消费者；当前 BLOCKED | 未来可读取规律与验证代价，但本 GDD 不定义第一只鬼 |
+| Supernatural Cost & Growth | 后续消费者；当前 BLOCKED | 未来可读取规律与验证代价，但本 GDD 不定义鬼锁能力 |
 | Audio & Atmosphere | 间接协作；GDD 未设计 | 不直接写入调查状态；声音必须先经场景观察转化为 fact |
 
 ### Boundary Rules
@@ -222,7 +222,7 @@ rule_scope_status(r, new_facts) =
 - Input / Accessibility 不改变判定公式；Field UI 必须按照已经批准的输入与无障碍契约呈现同一组 command。
 - 下游系统只能提交 command 或消费 event，不能直接修改事实、假设或规律状态。
 - 尚未设计的下游接口全部标记为 provisional；对应 GDD 完成时必须回填双向依赖。
-- 本系统不拥有场景后果、人物关系、音画表现、存档写入或第一只鬼能力。
+- 本系统不拥有场景后果、人物关系、音画表现、存档写入或鬼锁能力。
 
 ## Tuning Knobs
 

@@ -1,12 +1,14 @@
 # System GDD: Versioned Campaign Persistence
 
-> Status: APPROVED — lean formal review 2026-08-17
+> Status: **SUPERSEDED BASELINE — Godot persistence redesign required**
 >
 > Created: 2026-08-16
 >
 > System map ID: 4
 >
 > Scope: Formal Campaign only
+
+> Rebaseline note: 原子 checkpoint、版本迁移、损坏恢复和 Prototype 隔离原则继续有效；browser storage、key 与容量预算不再适用于正式 Campaign，必须在 Godot 运行时下重新设计存档介质与路径。
 
 ## 1. Overview
 

@@ -1,6 +1,6 @@
 # System GDD: Spatial Scene Exploration
 
-> Status: APPROVED — lean formal review 2026-08-17; interaction model A locked by user
+> Status: **SUPERSEDED for formal Campaign — 2026-08-20**
 >
 > Created: 2026-08-17
 >
@@ -9,6 +9,8 @@
 > System map ID: 5
 >
 > Scope: Formal Campaign only
+
+> Historical note: 本文完整保留曾批准的 Web 混合节点式方案，作为设计与技术 Spike 证据。正式 Campaign 已确认转向 Godot 4 第一人称 3D；后续空间系统以 `first-person-spatial-exploration.md` 为当前入口。本文不得继续作为正式实现要求。
 
 ## 1. Overview
 

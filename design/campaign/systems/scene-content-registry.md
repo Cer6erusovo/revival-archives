@@ -1,12 +1,14 @@
 # System GDD: Scene & Content Registry
 
-> Status: APPROVED — lean formal review 2026-08-17
+> Status: **IMPACT REVIEW REQUIRED — 2026-08-20 spatial model change**
 >
 > Created: 2026-08-16
 >
 > System map ID: 2
 >
 > Scope: Formal Campaign only
+
+> Rebaseline note: stable ID、provenance 和内容验证原则继续有效；scene node、viewpoint 与 Web media 假设需要改为 Godot 3D scene / entity / resource 模型后重新评审。
 
 ## 1. Overview
 

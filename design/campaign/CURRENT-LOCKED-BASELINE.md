@@ -4,15 +4,16 @@
 
 ## Status
 
-- CCGS phase: **Systems Design**
+- CCGS phase: **Systems Design rebaseline**
 - Review mode: **lean**
 - Existing playable `槐荫里事件` remains a **Prototype**, not Campaign canon.
 - Do not move/rewrite current `src/`, Pages or saves merely for directory cleanliness.
-- Current design focus: **Investigation & Rule Reasoning system design**. Foundation 1–4 and A-model Spatial Scene Exploration are formally approved in lean mode. The existing interaction spike is functional evidence only; Chapter 1 narrative is paused at the Act 5 legacy-area entry and first ghost selection remains **OPEN**.
+- Current design focus: propagate the confirmed **first-person 3D desktop / Godot 4** direction and the selected first ghost, **鬼锁**, through Campaign systems and architecture. Foundation 1–4 and A-model Spatial Scene Exploration were approved for the previous Web direction; they now require impact review. The existing interaction spike remains functional Web evidence only.
 
 ## Locked product identity
 
-- Free, non-commercial, single-player desktop Web fan game in the world of 《神秘复苏》.
+- Free, non-commercial, single-player first-person 3D desktop fan game in the world of 《神秘复苏》.
+- Formal Campaign engine direction: Godot 4 native desktop. The existing TypeScript/Vite Web runtime remains only for the Huaiyinli Prototype and historical spikes until a separate migration is approved.
 - Original protagonist has an independent legend.
 - Yang Jian keeps his original achievements and route. The protagonist is not his long-term teammate and cannot become the hidden reason Yang Jian survived canon key events.
 - Intersections with Yang Jian should be rare: passing traces, files, brief encounters, or occasional surprise crossover.
@@ -163,29 +164,34 @@ Baseline sequence:
 
 Act 4 intensity can be increased later, but this structural sequence is accepted.
 
-## Chapter 1 — Locked Act 5 entry / OPEN first-ghost encounter
+## Chapter 1 — Locked Act 5 entry / Working first-ghost encounter
 
 The fire door does **not** directly open onto a flashy supernatural boss room.
 
-It leads, through the Knocking Ghost domain's distorted route correspondence, into a **long-sealed legacy/back-of-house part of Seven High that physically exists as old school structure**.
+It leads, through the Knocking Ghost domain's distorted route correspondence, into a **long-sealed old-school section of Seven High that physically exists as old school structure**. The currently selected playable area is an old classroom corridor with multiple classrooms and a toilet area.
 
 Important:
 - not time travel;
 - not “Knocking Ghost created an old Seven High out of nowhere”;
 - not automatically a supernatural realm;
-- old logistics/equipment/legacy-building structure is a project addition filling a canon-unshown route;
-- exact architecture/history remains OPEN;
+- the old-school structure is a project addition filling a canon-unshown route;
+- the classroom corridor / multiple classroom / toilet composition is LOCKED; its construction history remains OPEN;
 - area initially feels quieter/more stable than the endless stair route, creating temporary relief.
 
-The protagonist's eventual first original ghost is somewhere in this legacy area, but its identity/rule is **OPEN**.
+The protagonist's first original ghost here is **鬼锁**.
 
-## First ghost — OPEN, do not lock a candidate
+## First ghost — 鬼锁
 
-### Design pause — LOCKED
+### Locked identity and encounter direction
 
-Narrative and scene design stop at the Act 5 legacy-area entry. Do not continue the first-ghost encounter, driving scene, white-moonlight reunion/tragedy mechanism, or Chapter 1 ending unless the user explicitly reopens this topic.
+- A first group of students enters multiple old classrooms to rest.
+- 鬼锁 quietly closes and locks occupied rooms, then hunts room by room; this first group is wiped out.
+- People outside can see trapped victims through door glass, while both internal opening and external forced rescue become difficult once the lock completes.
+- The protagonist cannot infer the full rule from the first deaths. Survivors only conclude that entering rooms is dangerous and avoid classrooms.
+- A later toilet-stall incident repeats the close-and-lock pattern. Only then does the protagonist begin to suspect that closing / locking marks the start of a hunt.
+- A possible short intervention window before the latch fully engages is retained as a direction, not yet a finished mechanic.
 
-Recent rejected directions include White Porcelain / force-transmission, Burden / unfinished-action variants, the Completion Ghost, and the Bone-Cage Corpse. They remain discussion history, not candidates awaiting automatic refinement.
+The exact selection rule, warning feedback, defense, rescue interaction, driving, resurrection cost, entity appearance and long-term growth remain **OPEN**. Do not default to door-blocking, smashing a lock, a QTE, universal sealing, ability theft or concept sealing as the answer.
 
 ### Previously locked `死锁` is REVOKED
 
@@ -198,7 +204,7 @@ The old “关系锚定 / 死锁” decision is no longer canon. It became too a
 - avoid gore as main horror;
 - 2–3 deaths/anomalies should let a high-school student form one simple survival rule;
 - surface rule correct but incomplete;
-- before being driven, ghost must genuinely kill/endanger **both protagonist group and white-moonlight group**;
+- before being driven, the ghost must genuinely endanger **both protagonist group and white-moonlight group**; after the locked first-wave wipeout, later progression must not rely on endlessly killing supporting characters;
 - driving must use observed rule and real clash with Knocking Ghost domain, not item pickup;
 - after driving, protagonist continues escaping with white-moonlight for a while before tragedy;
 - first ghost's deeper rule and Knocking Ghost domain together explain eventual “held her but lost her” event;
@@ -208,7 +214,7 @@ The old “关系锚定 / 死锁” decision is no longer canon. It became too a
 
 ### Candidate history — not canon
 
-Discussed directions include: simplified Ghost Lock, No-Dust/repulsion, Occupation, Boundary Scar, new Misalignment, Suture Corpse, Return-to-place, Retainer, Transcriber, Silence Ghost, Same-Level Ghost, Echo-not-arrived, etc.
+Discussed directions include: No-Dust/repulsion, Occupation, Boundary Scar, new Misalignment, Suture Corpse, Return-to-place, Retainer, Transcriber, Silence Ghost, Same-Level Ghost, Echo-not-arrived, etc.
 
 Do not treat any as selected merely because a previous AI wrote a detailed version.
 
@@ -235,6 +241,8 @@ Sound-centered first ghosts are high-risk at Seven High because Knocking Ghost i
 
 Start by reading this baseline plus current Campaign docs.
 
-Do **not** continue Act 5 or first-ghost ideation by default. Spatial Scene Exploration is locked to the A hybrid-node model and approved. Treat its isolated browser build only as a technical spike; it cannot validate immersion. Proceed to Investigation & Rule Reasoning without modifying the current game entry.
+Resume from `supernatural/ghost-lock.md`. The next genuine design decision is the playable rule expression for distinguishing a supernatural lock, intervening before completion, rescuing someone from outside and defending without reducing the encounter to a door QTE.
+
+The A hybrid-node Spatial Scene Exploration model is superseded for the formal Campaign by the confirmed first-person 3D desktop direction. Treat its browser build only as historical functional evidence. Complete the Godot-oriented system and architecture rebaseline before implementation.
 
 The existing Huaiyinli Prototype remains stable and playable. Do not migrate or rewrite its code merely to satisfy the new document structure.

@@ -8,8 +8,8 @@
 - Review mode: lean
 - Campaign implementation: 尚未开始
 - Opening chapter: 大昌市第七中学敲门鬼事件并行原创路线
-- Current refinement: 第一章第四幕结构与第五幕入口已锁定；后续剧情与第一只鬼为 OPEN / PAUSED
-- Current workflow: Investigation & Rule Reasoning system design；A 技术 Spike 不作为体验门禁
+- Current refinement: 第一只鬼“鬼锁”与其第一轮猎杀结构已锁定；破解、救援、防御和驾驭仍为 OPEN
+- Current workflow: 第一人称 3D 桌面转向的 Systems Design rebaseline；A 技术 Spike 只保留为 Web 历史证据
 
 ## 阅读顺序
 
@@ -24,7 +24,8 @@
 9. `canon/original-work-anchors.md` — 已核对的原著事实
 10. `canon/ability-collision-blacklist.md` — 原著能力撞车禁区
 11. `decisions/decision-log.md` — 设计取舍与被否决/撤销方案
-12. `supernatural/deadlock.md` — 已撤销的“死锁”候选档案，仅供避免设计回退
+12. `supernatural/ghost-lock.md` — 当前第一只鬼与已锁定 / 开放边界
+13. `supernatural/deadlock.md` — 已撤销的旧“死锁”候选档案，仅供避免设计回退
 
 ## 状态标签
 
@@ -42,4 +43,4 @@
 - 可继承：调查终端经验、规则推理、模糊复苏征兆、存档/验证经验。
 - 不自动继承：鬼影、门牌鬼、七日制作为全局结构、主角已经拥有总部权限等叙事。
 
-等正式 Campaign concept 和 opening slice 通过 gate，再决定如何把现有代码拆为 Campaign 与 Prototype。
+正式 Campaign 不再直接建立在现有 Web 运行时上。后续先完成 Godot 方向的系统与架构重基线，再决定新工程布局；现有 Prototype 继续独立保留。
