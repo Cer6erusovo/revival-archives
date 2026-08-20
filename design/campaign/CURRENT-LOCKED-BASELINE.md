@@ -194,8 +194,11 @@ The protagonist's first original ghost here is **鬼锁**.
 - Breaking glass, crossing a stall partition or creating another opening provides an escape route but never stops the hunt. Existing breaches remain; intact doors and glass become harder to break as deaths strengthen 鬼锁.
 - Each death accelerates bodily locking and target turnover and expands the coverage area, eventually allowing it to cover the entire old teaching building.
 - The toilet-stall incident becomes the first successful drag rescue. Later progression uses evacuation and reunion rather than repeatedly consuming the protagonist and white-moonlight teams.
+- Weak coverage locks only one occupied enclosure. Stronger coverage may suddenly lock multiple occupied enclosures at once, but there is always exactly one physical 鬼锁 entity, manifesting at the center of that coverage rather than walking to every door first. After manifestation it physically travels between targets instead of splitting or repeatedly teleporting; directional joint and metal sounds expose its movement.
+- When several locked spaces contain living people, the entity prioritizes the space with the fewest occupants. This deliberately permits a dangerous single-person lure using a pre-broken escape route; failure kills the lure and strengthens 鬼锁.
+- Before the sudden simultaneous closure, handles make small autonomous movements, latch sounds converge from the coverage edge toward its center, and loose door glass vibrates. These cues reveal approximate range and manifestation direction but cannot be interrupted to cancel the lock.
 
-The exact target-selection priority, concrete first-person timing, driving, resurrection cost, entity appearance and long-term growth remain **OPEN**. Do not default to door-blocking, smashing a lock, a periodic safety window, a QTE, universal sealing, ability theft or concept sealing as the answer.
+The tie-break priority between equally populated spaces, concrete first-person timing, driving, resurrection cost, entity appearance and long-term growth remain **OPEN**. Do not default to door-blocking, smashing a lock, a periodic safety window, a QTE, universal sealing, ability theft or concept sealing as the answer.
 
 ### Previously locked `死锁` is REVOKED
 
