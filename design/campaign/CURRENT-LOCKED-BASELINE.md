@@ -189,9 +189,13 @@ The protagonist's first original ghost here is **鬼锁**.
 - People outside can see trapped victims through door glass, while both internal opening and external forced rescue become difficult once the lock completes.
 - The protagonist cannot infer the full rule from the first deaths. Survivors only conclude that entering rooms is dangerous and avoid classrooms.
 - A later toilet-stall incident repeats the close-and-lock pattern. Only then does the protagonist begin to suspect that closing / locking marks the start of a hunt.
-- A possible short intervention window before the latch fully engages is retained as a direction, not yet a finished mechanic.
+- 鬼锁 has an expanding coverage area and a current locked hunting space. Everyone inside the coverage area develops progressively slower joints; only crossing its outer physical boundary stops the worsening, followed by gradual recovery.
+- Full bodily lock is not death. 鬼锁 must physically reach and touch the immobilized victim, then immediately breaks the neck. An outside rescuer may still drag the victim across a physical boundary before contact.
+- Breaking glass, crossing a stall partition or creating another opening provides an escape route but never stops the hunt. Existing breaches remain; intact doors and glass become harder to break as deaths strengthen 鬼锁.
+- Each death accelerates bodily locking and target turnover and expands the coverage area, eventually allowing it to cover the entire old teaching building.
+- The toilet-stall incident becomes the first successful drag rescue. Later progression uses evacuation and reunion rather than repeatedly consuming the protagonist and white-moonlight teams.
 
-The exact selection rule, warning feedback, defense, rescue interaction, driving, resurrection cost, entity appearance and long-term growth remain **OPEN**. Do not default to door-blocking, smashing a lock, a QTE, universal sealing, ability theft or concept sealing as the answer.
+The exact target-selection priority, concrete first-person timing, driving, resurrection cost, entity appearance and long-term growth remain **OPEN**. Do not default to door-blocking, smashing a lock, a periodic safety window, a QTE, universal sealing, ability theft or concept sealing as the answer.
 
 ### Previously locked `死锁` is REVOKED
 
